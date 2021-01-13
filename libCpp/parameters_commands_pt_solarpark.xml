@@ -1,0 +1,1215 @@
+<!DOCTYPE ParametersManager>
+<ParametersManager version="1.1">
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_DsmRasterFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DSM raster file, same CRS as project and with no data value.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dsm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_MaximumDistanceAxisReflections</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum distance to array panel axis in reflection points</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.500</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_MinimumSideSmallestObjectInImage</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum side of the smallest object in image</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.300</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_OutputDistancesImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to store the distance to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_distances</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_OutputMaskImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to store the pixels where is visible the array panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_mask</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_OutputReflectedPixelsImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to store the pixel where exists reflection from another array panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_reflectedPixels</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_OutputViewAnglesImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to store the view angle from normal to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_viewAngles</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>3. Compute corrections: distance, view angle and reflection</Command>
+        <Code>CDTC_ProcessOnlyEnabledImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute panels geometry using 3d line detection</Command>
+        <Code>CPG3DLD_ClassesToIgnore</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer numbers vector</Type>
+        <Description>Classes to ignore</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>2;7;8</Value>
+        <MaximumValue>31;31;31</MaximumValue>
+        <MinimumValue>0;0;0</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Compute panels geometry using 3d line detection</Command>
+        <Code>CPG3DLD_OutputPath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Output path for report files</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>H:\Eiffage\SolarPark\PozoCanada\model_management\output</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute panels geometry using 3d line detection</Command>
+        <Code>CPG3DLD_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute panels geometry using 3d line detection</Command>
+        <Code>CPG3DLD_UseExistingPlanesAndLinesFiles</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use existing planes and lines files</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute panels geometry using 3d line detection</Command>
+        <Code>CPG3DLD_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>H:/Eiffage/SolarPark/PozoCanada/data/dtm_50cm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute panels geometry using 3d line detection</Command>
+        <Code>CPG3DLD_point_cloud_files_path</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Point cloud files path, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>H:/Eiffage/SolarPark/PozoCanada/data/arrays_pcls</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_CheckPanelsRowsColumnsSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Check the number of rows and columns of panels compared to size</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_MeanAltitudeTolerance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Mean altitude tolerance for arrays parts</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.20</Value>
+        <MaximumValue>0.50</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_MeanSlopeTolerance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Mean slope tolerance for arrays parts</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>sexagesimal degrees (DEG)</Unit>
+        <Value>5.00</Value>
+        <MaximumValue>20.00</MaximumValue>
+        <MinimumValue>0.50</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_MinimumSizeArrayPanels</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum size of array panels</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>2.00</Value>
+        <MaximumValue>10.00</MaximumValue>
+        <MinimumValue>0.50</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_OutputPath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Output path for report files</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/outputs_pf</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_PanelFrameWidth</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Panel frame width</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.035</Value>
+        <MaximumValue>0.200</MaximumValue>
+        <MinimumValue>0.000</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_dsm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DSM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dsm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dtm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_Algorithm</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Algorithm</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>farthest corners;union</ValueList>
+        <Value>farthest corners</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_MaximumPanelDiagonal</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum value of the diagonal of a panel</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.800</Value>
+        <MaximumValue>20.000</MaximumValue>
+        <MinimumValue>0.100</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_MaximumPanelsDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum distance between panels</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.100</Value>
+        <MaximumValue>0.500</MaximumValue>
+        <MinimumValue>0.005</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_OutputArrayShapefileName</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Output array shapefile filename, in panels shapefile path</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>ArraysFromPanels.shp</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_PanelsShapefile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Shapefile with panels geometry, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/solar_park/solar_park_definition/geometria_fran/paneles.shp</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSH_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_DsmRasterFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DSM raster file, same CRS as project and with no data value.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dsm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_ImagesFootprintBufferDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Images footprint buffer distance to check points within images</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.000</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_MinimumSideSmallestObjectInImage</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum side of the smallest object in image (computed as area region)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.300</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_NumberOfPointsBySide</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Number of points to compute in each side of the footprint</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>31</Value>
+        <MaximumValue>999</MaximumValue>
+        <MinimumValue>2</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>2. Get images footprints from arrays panels</Command>
+        <Code>GIFAP_ProcessOnlyEnabledImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_AlgorithmHotSpotsDetection</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Algorithm for hot spots detection</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>Delta;Thresholds</ValueList>
+        <Value>Delta</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_AlgorithmHotSpotsDetection_DeltaValue</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum value of delta temperature for hot spots detection. (10,20,30,100):(leve,moderada,grave,urgente)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>10.00</Value>
+        <MaximumValue>200.00</MaximumValue>
+        <MinimumValue>2.00</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_ClusterDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum separation between hot spots to group them</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.450</Value>
+        <MaximumValue>10.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_ImageClusterDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Maximum separation between hot spots pixels in image to group them</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>3</Value>
+        <MaximumValue>50</MaximumValue>
+        <MinimumValue>0</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_InputDistancesImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the distance to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_distances</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_InputEmissivityImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the distance to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_emi</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_InputImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for input corrected thermal images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_tcv</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_InputTemperatureEquation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for read input corrected values to 16 bits thermal images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>1.0*x;1.0/2.0*x;x/4.0+10.0;x/100.0</ValueList>
+        <Value>x/100.0</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_InputViewAnglesImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the view angle from normal to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_viewAngles</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_MinimumDeltaInImageValue</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum value of delta temperature in image for hot spots detection.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>10.00</Value>
+        <MaximumValue>200.00</MaximumValue>
+        <MinimumValue>2.00</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_MinimumNumberOfImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Minimum number of images for hot spot</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>2</Value>
+        <MaximumValue>100</MaximumValue>
+        <MinimumValue>2</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_OutputImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for output images with detected hotspots</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_hsd</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_ProcessOnlyEnabledImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_SunIrradianceDataFormat</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Sun irradiance data format</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>File;Value</ValueList>
+        <Value>Value</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_SunIrradianceFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Sun irradiance CSV file: date(yyyy:MM:dd);time(hh:mm:ss);panel;value</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_PozoCanada/data/SunIrradiance.csv</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_SunIrradianceFileOffsetToUTC</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Offset to UTC from time in file, example: -02:00:00 (hh:mm:ss)</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>-02:00:00</Value>
+    </Parameter>
+    <Parameter>
+        <Command>5. Hot spots detection</Command>
+        <Code>HSD_SunIrradianceValue</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Value of Sun irradiance, W/m2, for input data format value and default value. 0 for ignore normalization</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>900.000000</Value>
+        <MaximumValue>10000.000000</MaximumValue>
+        <MinimumValue>0.000000</MinimumValue>
+        <PrintPrecision>6</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_DN2TemperatureEquation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for conversion digital number to temperature</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>1.0*x;0.04*x-273.15</ValueList>
+        <Value>0.04*x-273.15</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_OutputPath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Output path for report files</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/reports</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_ProcessOnlyEnabledHotspots</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled hot spots</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_ProcessOnlyEnabledImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_SunIrradianceDataFormat</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Sun irradiance data format</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>File;Value</ValueList>
+        <Value>Value</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_SunIrradianceFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Sun irradiance CSV file: date(yyyy:MM:dd);time(hh:mm:ss);panel;value</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_PozoCanada/data/SunIrradiance.csv</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_SunIrradianceFileOffsetToUTC</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Offset to UTC from time in file, example: -02:00:00 (hh:mm:ss)</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>-02:00:00</Value>
+    </Parameter>
+    <Parameter>
+        <Command>6. Report Hot spots</Command>
+        <Code>REHS_SunIrradianceValue</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Value of Sun irradiance, W/m2, for input data format value and default value. 0 for ignore normalization</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>900.000000</Value>
+        <MaximumValue>10000.000000</MaximumValue>
+        <MinimumValue>0.000000</MinimumValue>
+        <PrintPrecision>6</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Remove Hot spots</Command>
+        <Code>RHS_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AlgorithmTemperatureHomogeneizationInArrayPanel</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Algorithm for temperature homogeneization in array panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>Mode of modes;Mean of modes;Mean of means;Mean of percentil threshold</ValueList>
+        <Value>Mean of percentil threshold</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_ArrayPanelTemperatureEstimationPercentileThreshold</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Percentil threshold for estimation of array panel temperature</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>75.0</Value>
+        <MaximumValue>98.0</MaximumValue>
+        <MinimumValue>5.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AtmosphereRelativeHumidity</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Atmosphere relative humidity (%), for input data format value and default value</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>30.0</Value>
+        <MaximumValue>100.0</MaximumValue>
+        <MinimumValue>0.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AtmosphereTemperature</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Atmosphere temperature (ºC), for input data format value and default value</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>28.0</Value>
+        <MaximumValue>50.0</MaximumValue>
+        <MinimumValue>0.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AtmosphereTemperatureAndRelativeHumidtyDataFormat</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Data format for atmosphere temperature and relative humidity</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>File;Value</ValueList>
+        <Value>Value</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AtmosphereTemperatureAndRelativeHumidtyFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Atmosphere temperature and relative humidity CSV file: date(yyyy:MM:dd);time(hh:mm:ss);temp(ºC);humidity(%)</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_PozoCanada/data/TemperatureAndRelativeHumidity.csv</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AtmosphereTemperatureAndRelativeHumidtyFileOffsetToUTC</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Offset to UTC from time in file, example: -02:00:00 (hh:mm:ss)</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>-02:00:00</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_AtmosphericTransmissionCoefficientEquation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for atmospheric transmission coefficient, for temperature and relative humidity</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>FlirToolkit;1.0-(0.02-0.002*t-0.0008*rh)*d/200.0</ValueList>
+        <Value>FlirToolkit</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_DN2TemperatureEquation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for conversion digital number to temperature</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>1.0*x;0.04*x-273.15</ValueList>
+        <Value>0.04*x-273.15</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_InputDistancesImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the distance to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_distances</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_InputImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for input corrected thermal images or empty for use database images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_InputMaskImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the pixels where is visible the array panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_mask</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_InputReflectedPixelsImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the pixel where exists reflection from another array panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_reflectedPixels</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_InputViewAnglesImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for image to read the view angle from normal to panel</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_viewAngles</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_OutputEmissivityEquation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for write output emissivity values to 8 bits images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>100.0*x;10.0*x</ValueList>
+        <Value>100.0*x</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_OutputEmissivityImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for output emissivity images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_emi</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_OutputImagesSuffix</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for output corrected thermal images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_tcv</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_OutputTemperatureEquation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for write output corrected values to 16 bits thermal images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>1.0*x;2.0*x;(x-10.0)*4.0;100.0*x</ValueList>
+        <Value>100.0*x</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_ProcessOnlyEnabledImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_ReflectedTemperature</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Reflected temperature (ºC), for clear sky usually -50 to -60</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>-55.0</Value>
+        <MaximumValue>120.0</MaximumValue>
+        <MinimumValue>-120.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_TemperatureEquationEmissivityAngleOfView</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Equation for emissivity for angle of view</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>1.0*x;0.8979+0.00060*x-1.3285e-05*x^2+1.199e-06*x^3-2.11e-08*x^4</ValueList>
+        <Value>0.8979+0.00060*x-1.3285e-05*x^2+1.199e-06*x^3-2.11e-08*x^4</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_CheckPanelsRowsColumnsSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Check the number of rows and columns of panels compared to size</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_MeanAltitudeTolerance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Mean altitude tolerance for arrays parts</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.20</Value>
+        <MaximumValue>0.50</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_MeanSlopeTolerance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Mean slope tolerance for arrays parts</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>sexagesimal degrees (DEG)</Unit>
+        <Value>5.00</Value>
+        <MaximumValue>20.00</MaximumValue>
+        <MinimumValue>0.50</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_OutputPath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Output path for report files</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_PozoCanada/Outputs</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_PanelFrameWidth</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Panel frame width</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.03</Value>
+        <MaximumValue>0.20</MaximumValue>
+        <MinimumValue>0.00</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_ProcessOnlyEnabledArrays</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled arrays</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_dsm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DSM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_PozoCanada/VueloPhantom4ProRTK/dsm_combinado.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_PozoCanada/VueloPhantom4ProRTK/dtm_50cm.tif</Value>
+    </Parameter>
+</ParametersManager>

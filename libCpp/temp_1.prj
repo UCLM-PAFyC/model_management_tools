@@ -1,0 +1,10 @@
+Photogrammetry Project
+- Number of processes ......................................# 1
+- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_OPL
+  - Database file name .....................................# "X:\EjemplosLidarEiffage\zamora\ModelManagementTools\kk1.sqlite"
+  - Power line name (None or empty will be shapefile name) .# 
+  - Overhead Power Line shapefile ..........................# "X:\EjemplosLidarEiffage\zamora\geometria_lat\Lineas.shp"
+    Field name (case sensitive, None for ignore ) ..........# name
+  - Minimum separation between Electric Pylots (m) .........# 20.0
+  - Electric Pylots base radius (m) ........................# 8.0
+  - Electric Pylots height (m) .............................# 40.0

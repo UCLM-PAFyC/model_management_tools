@@ -1,0 +1,45 @@
+{
+  "description" : "Collection format for Micasense surface reflectance product",
+  "references" : "http://94.23.83.201/redmine/projects/ticpa/wiki/PROTOCOLO_DATOS",
+  "tags" : ["Micasense", "PAFYC", "UCLM", "surface reflectance"],
+  "pattern" : ".*\\.tif",
+  "images":{
+    "pattern": ".*(.{3}-.{3}-.{3}_.+_.{8}_.*)\\.tif"
+  },
+  "datetime" : {
+    "pattern" : ".*.{3}-.{3}-.{3}_.+_(.{8})_.*\\.tif",
+    "format" : "%Y%m%d"
+  },
+  "bands": {
+    "BLUE" : {
+      "band" : 1,
+      "scale" : 0.0001,
+      "pattern" : ".+\\.tif$",
+      "nodata" : 10000
+    },
+    "GREEN" : {
+      "band" : 2,
+      "scale" : 0.0001,
+      "pattern" : ".+\\.tif$",
+      "nodata" : 10000
+    },
+    "RED" : {
+      "band" : 3,
+      "scale" : 0.0001,
+      "pattern" : ".+\\.tif$",
+      "nodata" : 10000
+    },
+    "REDEDGE" : {
+      "band" : 4,
+      "scale" : 0.0001,
+      "pattern" : ".+\\.tif$",
+      "nodata" : 10000
+    },
+    "NIR" : {
+      "band" : 5,
+      "scale" : 0.0001,
+      "pattern" : ".+\\.tif$",
+      "nodata" : 10000
+    }
+  }
+}
