@@ -277,7 +277,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>Determination of hazard areas</Command>
@@ -300,8 +300,32 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
     </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_VegetationGrowthModelFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Vegetation growth model file, build with point cloud tools internal process</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Vegetation_Height_Growth/vge_model.txt</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_YearsExtrapolation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Years for the extrapolation to the future of the growth model, 0 no extrapolation</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>5</Value>
+        <MaximumValue>50</MaximumValue>
+        <MinimumValue>0</MinimumValue>
+    </Parameter>	
     <Parameter>
         <Command>Extract electric pylons and connections</Command>
         <Code>EEPC_ArmWidth</Code>

@@ -27,6 +27,17 @@
     </Parameter>
     <Parameter>
         <Command>las2dem64</Command>
+        <Code>las2dem64_additional_switches</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Any additional valid tool-specific switches, according to LAStools documentation</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
+    </Parameter>
+    <Parameter>
+        <Command>las2dem64</Command>
         <Code>las2dem_class</Code>
         <Enabled>Yes</Enabled>
         <Tag>-keep_class</Tag>
@@ -67,6 +78,49 @@
     </Parameter>
     <Parameter>
         <Command>lasclip64</Command>
+        <Code>lasclip64_additional_switches</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Any additional valid tool-specific switches, according to LAStools documentation</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
+    </Parameter>
+    <Parameter>
+        <Command>lasclip64</Command>
+        <Code>lasclip_ignore_classes</Code>
+        <Enabled>Yes</Enabled>
+        <Tag>-ignore_class</Tag>
+        <Type>Text</Type>
+        <Description>Classes to keep inside removing area, separated by a space</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>2</Value>
+    </Parameter>
+    <Parameter>
+        <Command>lasclip64</Command>
+        <Code>lasclip_interior</Code>
+        <Enabled>Yes</Enabled>
+        <Tag>-interior</Tag>
+        <Type>Empty Text</Type>
+        <Description>To remove inside geometries</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+    </Parameter>
+    <Parameter>
+        <Command>lasclip64</Command>
+        <Code>lasclip_keep_classes</Code>
+        <Enabled>Yes</Enabled>
+        <Tag>-keep_class</Tag>
+        <Type>Text</Type>
+        <Description>Classes to keep outside removing area, separated by a space</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
+    </Parameter>
+    <Parameter>
+        <Command>lasclip64</Command>
         <Code>lasclip_output_laz</Code>
         <Enabled>Yes</Enabled>
         <Tag>-olaz</Tag>
@@ -84,7 +138,7 @@
         <Description>Shapefile for clipping (Polygon)</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>H:/Eiffage/SolarPark/PozoCanada/data/dtm_50cm.tif</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Definicion_LAT/ROI_vegetation_height_growth_7_5m.shp</Value>
     </Parameter>
     <Parameter>
         <Command>lasclip64</Command>
@@ -95,7 +149,7 @@
         <Description>Clip a point cloud file for polygon in shapefile</Description>
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>0</Value>
+        <Value></Value>
     </Parameter>
     <Parameter>
         <Command>lasclip64</Command>
@@ -106,6 +160,59 @@
         <Description>Report process information in console</Description>
         <PrintSize>100</PrintSize>
         <Unit>adimensional</Unit>
+    </Parameter>
+    <Parameter>
+        <Command>lasheight64</Command>
+        <Code>lasheight64_additional_switches</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Any additional valid tool-specific switches, according to LAStools documentation</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
+    </Parameter>
+    <Parameter>
+        <Command>lasheight64</Command>
+        <Code>lasheight64_keep_classes</Code>
+        <Enabled>Yes</Enabled>
+        <Tag>-keep_class</Tag>
+        <Type>Text</Type>
+        <Description>Classes to keep outside removing area, separated by a space</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>4 5</Value>
+    </Parameter>
+    <Parameter>
+        <Command>lasheight64</Command>
+        <Code>lasheight64_output_laz</Code>
+        <Enabled>Yes</Enabled>
+        <Tag>-olaz</Tag>
+        <Type>Empty Text</Type>
+        <Description>Output format is LAZ</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+    </Parameter>
+    <Parameter>
+        <Command>lasheight64</Command>
+        <Code>lasheight64_replace_z</Code>
+        <Enabled>Yes</Enabled>
+        <Tag>-replace_z</Tag>
+        <Type>Empty Text</Type>
+        <Description>Replace altitude with height over ground</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+    </Parameter>
+    <Parameter>
+        <Command>lastile64</Command>
+        <Code>lastile64_additional_switches</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Any additional valid tool-specific switches, according to LAStools documentation</Description>
+        <PrintSize>100</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
     </Parameter>
     <Parameter>
         <Command>lastile64</Command>
@@ -190,7 +297,7 @@
         <Description>First shapefile for clip</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>X:/EjemplosLidarEiffage/zamora/geometria_lat/buffer_lineas_50m.shp</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Definicion_LAT/ROI_50m.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Powerline preprocessing</Command>
@@ -201,7 +308,7 @@
         <Description>Second shapefile for clip. 25 m for PNOA-LIDAR</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>X:/EjemplosLidarEiffage/zamora/geometria_lat/buffer_lineas_15m.shp</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Definicion_LAT/ROI_15m.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Powerline preprocessing</Command>
@@ -212,7 +319,7 @@
         <Description>Third shapefile for clip</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>X:/EjemplosLidarEiffage/zamora/geometria_lat/buffer_lineas_7,5m_disolve.shp</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Definicion_LAT/ROI_7_5m.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Powerline preprocessing</Command>
@@ -360,7 +467,7 @@
         <Description>Empty base path for auxiliary temporal folders</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>X:\EjemplosLidarEiffage\zamora\temp</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Temp</Value>
     </Parameter>
     <Parameter>
         <Command>SolarPark preprocessing</Command>
@@ -698,7 +805,7 @@
         <Description>Empty base path for auxiliary temporal folders</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>G:/eiffage/temp</Value>
+        <Value>X:/MetashapeProjects/20190814_Fuentealamo_Micasense/tmp</Value>
     </Parameter>
     <Parameter>
         <Command>SolarPark preprocessing</Command>
