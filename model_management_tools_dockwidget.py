@@ -1332,6 +1332,11 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         # # msgBox.exec_()
         return
 
+    def refreshMapCanvas(self):
+        currentScale = self.iface.mapCanvas().scale()
+        newScale = currentScale * 1.001
+        self.iface.mapCanvas().zoomScale(newScale)
+
     def removeGroup(self,root,name):
         # root = QgsProject.instance().layerTreeRoot()
         group = root.findGroup(name)
@@ -1783,6 +1788,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             self.loadPhotovoltaicArrayPanels()
             self.loadPhotovoltaicPanels()
             self.loadPhotovoltaicAnomaliesLayers()
+        self.refreshMapCanvas()
         return
 
     def selectProject(self):

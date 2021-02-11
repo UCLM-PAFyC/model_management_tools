@@ -293,14 +293,15 @@
     </Parameter>
     <Parameter>
         <Command>Determination of hazard areas</Command>
-        <Code>DHA_dtm_raster_file</Code>
+        <Code>DHA_VegetationGrowthModelConfidenceLevel</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
-        <Type>File</Type>
-        <Description>DTM raster file, same CRS as project.</Description>
-        <PrintSize>200</PrintSize>
+        <Type>Value list</Type>
+        <Description>Confidence level for vegetation growth model</Description>
+        <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <ValueList>68%;90%;95%;99%</ValueList>
+        <Value>90%</Value>
     </Parameter>
     <Parameter>
         <Command>Determination of hazard areas</Command>
@@ -311,7 +312,7 @@
         <Description>Vegetation growth model file, build with point cloud tools internal process</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/Vegetation_Height_Growth/vge_model.txt</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Vegetation_Height_Growth/VegetationGrowthModel.txt</Value>
     </Parameter>
     <Parameter>
         <Command>Determination of hazard areas</Command>
@@ -322,10 +323,21 @@
         <Description>Years for the extrapolation to the future of the growth model, 0 no extrapolation</Description>
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>5</Value>
+        <Value>0</Value>
         <MaximumValue>50</MaximumValue>
         <MinimumValue>0</MinimumValue>
-    </Parameter>	
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+    </Parameter>
     <Parameter>
         <Command>Extract electric pylons and connections</Command>
         <Code>EEPC_ArmWidth</Code>
@@ -403,7 +415,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -890,6 +902,6 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <Value>X:/EjemplosLidarEiffage/zamora/proceso_lidar/zamora_dtm.tif</Value>
     </Parameter>
 </ParametersManager>
