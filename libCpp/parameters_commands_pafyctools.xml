@@ -74,7 +74,7 @@
         <Description>Shapefile of crops, point type, with id unique integer field and line integer field</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/Proyectos_QGis_PAFyCTools/FuenteAlamo_NW/data/cepas_amaro_dhl.shp</Value>
+        <Value>D:/QGisPAFyCTooolsProjects/FuenteAlamo_NW/data/cepas_amaro_dhl.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Create Crops Management Project</Command>
