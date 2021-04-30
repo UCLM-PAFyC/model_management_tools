@@ -927,7 +927,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
                 vlayer_falls = QgsVectorLayer(uri.uri(), display_name_falls, 'spatialite')
                 QgsProject.instance().addMapLayer(vlayer_falls, False)
                 self.layerTreeProject.insertChildNode(1, QgsLayerTreeLayer(vlayer_falls))
-                vlayer_falls.loadNamedStyle(self.qmlHazardAreasHeights)
+                vlayer_falls.loadNamedStyle(self.qmlHazardAreasFalls)
                 vlayer_falls.triggerRepaint()
                 # self.iface.setActiveLayer(vlayer_types)
                 # self.iface.zoomToActiveLayer()
