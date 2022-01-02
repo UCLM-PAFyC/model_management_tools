@@ -1,0 +1,26 @@
+Wires computation for maximum sag hypothesis
+- Project file ...................................: C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/pwl_pnoa_lidar.sqlite
+- Electric pylons connection .....................: EP_1_EP_2
+- Number of wire groups to compute ...............: 4
+- Processing parameters:
+  - Process only enabled connections .............: True
+  - Process only enabled wires groups ............: True
+  - Powerline voltage (kv) .......................: 400.0
+  - Wire section (mm2) ...........................: 281.1
+  - Wire elastic modulus (daN/mm2) ...............: 7553.0
+  - Wire coef linear thermal expansion (ºC-1) ....: 0.000018900
+  - Wire weight (daN/m) ..........................: 0.977
+  - Wire diameter (mm) ...........................: 21.8
+  - Wire breaking coefficient (daN) ..............: 8456.0
+  - Wire maximum distance from axis (m) ..........: 8.0
+  - Maximum vertical distance between wires (m) ..: 18.0
+  - Minimum safety ground distance (m) ...........: 10.0
+  - Safety ground distance (m) ...................: 10.0
+  - Digital terrain model file name ..............: C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif
+- Region of interest .............................: POLYGON((299491.2492 4628262.4674,299792.0161 4628414.4675,299799.2329 4628400.1875,299498.4660 4628248.1874,299491.2492 4628262.4674))
+- Minimum elevation from dtm .....................: 766.757
+- Maximum elevation from dtm .....................: 773.519
+- Catenary arc length ............................: 338.114
+- Catenary maximum sag ...........................: 11.579
+- Catenary maximum sag arc length ................: 168.400
+- Pylons minimum height ..........................: 22.336

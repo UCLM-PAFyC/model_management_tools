@@ -1,0 +1,19 @@
+Model Database Management Project
+- Number of processes ......................................# 4
+- Process (CREATE_DB,ADD_ROI,...) ..........................# CREATE_DB
+  - Database file name .....................................# "H:/Eiffage/SolarPark/PozoCanada/model_management/MmTools_sp_pozocanada.sqlite"
+  - Database CRS (libCRS/EPSG/proj4/wkt) ...................# 25830
+    Height type (ORTHOMETRIC_HEIGHT,ELLIPSOID_HEIGHT) ......# ORTHOMETRIC_HEIGHT
+  - Project Type (Generic,PowerLine,SolarPark) .............# solarpark
+  - Project parameters (par1@v@value1@p@par2@v@value2...) ..# Author@v@@p@Company@v@
+- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_ROI
+  - Database file name .....................................# "H:/Eiffage/SolarPark/PozoCanada/model_management/MmTools_sp_pozocanada.sqlite"
+  - ROI File ...............................................# "H:/Eiffage/SolarPark/PozoCanada/solar_park_definition/roi.shp"
+    Field id (None for all features ) ......................# None
+      Field id values (separed by ; ignored si None) .......# 
+- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# SET_SSF
+  - Database file name .....................................# "H:/Eiffage/SolarPark/PozoCanada/model_management/MmTools_sp_pozocanada.sqlite"
+  - Solar park shapefile ...................................# "H:/Eiffage/SolarPark/PozoCanada/solar_park_definition/arrays.shp"
+- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_SPD
+  - Database file name .....................................# "H:/Eiffage/SolarPark/PozoCanada/model_management/MmTools_sp_pozocanada.sqlite"
+  - Solar park shapefile ...................................# "H:/Eiffage/SolarPark/PozoCanada/solar_park_definition/arrays.shp"

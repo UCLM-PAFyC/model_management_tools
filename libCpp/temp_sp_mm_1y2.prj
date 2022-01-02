@@ -1,8 +1,0 @@
-Solar Park Project
-- Number of processes ......................................# 2
-- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# SET_SSF
-  - Database file name .....................................# "C:/uclm/Ejemplo_PozoCanada/SolarPark/MmTools_pozoCanada.sqlite"
-  - Solar park shapefile ...................................# "C:/uclm/Ejemplo_PozoCanada/SolarPark/solar_park_definition/arrays.shp"
-- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_SPD
-  - Database file name .....................................# "C:/uclm/Ejemplo_PozoCanada/SolarPark/MmTools_pozoCanada.sqlite"
-  - Solar park shapefile ...................................# "C:/uclm/Ejemplo_PozoCanada/SolarPark/solar_park_definition/arrays.shp"

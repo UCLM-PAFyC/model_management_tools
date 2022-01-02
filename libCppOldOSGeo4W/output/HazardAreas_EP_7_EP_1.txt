@@ -1,0 +1,51 @@
+Determination of hazard areas report
+- Project file .........................: C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/pwl_rpas_lidar.sqlite
+- Electric pylons connection ...........: EP_7_EP_1
+- Number of wire groups ................: 4
+- Processing parameters:
+  - Process only enabled ...............: True
+  - Minimum area size ..................: 0.500
+  - Buffer area size ...................: 50.000
+  - Connection distance ................: 1
+  - Maximum number of connected cells ..:100
+  - DTM raster file ....................: C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif
+  - Wind deviation using maximum sag ...: False
+  - Maximum wind deviation (no if sag) .: 2.000
+  - Minimum distance by fall ...........: 1.000
+  - Minimum free height ................: 6.000
+  - Minimum slope distance .............: 5.000
+  - Point classes to ignore ............: 7,8,9,10,11,12
+  - Catenary threshold .................: 0.400
+- Get Object Points time ......: 642 milliseconds
+- Get Points geometry time ....: 7800 milliseconds
+- Region of interest ..........: POLYGON((299188.4129 4628155.7267,299472.2110 4628299.9047,299517.5042 4628210.7501,299233.7061 4628066.5721,299188.4129 4628155.7267))
+- Number of points in region ..: 433752
+- Number of points to ignore: 
+  - First electric pylon ......: 29999
+  - Second electric pylon .....: 29095
+  - Electric pylons connection : 0
+  - Wires groups ..............: 148196
+- Number of grids .............: 39539
+- Get height grids time .......: 1012 milliseconds
+- Get values by grid time .....: 36768 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 0 milliseconds
+- Hazard areas groups:  1
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+         1                  36       1      6.91      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((299306 4628146,299306.0 4628146.5,299306.5 4628146.5,299306.5 4628146.0,299306 4628146))
+- Storing time ................: 32 milliseconds
+- Get values by grid time .....: 38294 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 0 milliseconds
+- Hazard areas maximum sag hypothesis groups:  8
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+         7                  36       5      6.86      6.79      6.98      0.08       3      2.89      2.84      2.97      0.07       0      ----      ----      ----      ----  POLYGON ((299290.5 4628137.0,299290.5 4628137.5,299291.0 4628137.5,299291.5 4628137.5,299291.5 4628138.0,299292 4628138,299292.0 4628137.5,299292.5 4628137.5,299293.0 4628137.5,299293 4628137,299292.5 4628137.0,299292.5 4628136.5,299292.0 4628136.5,299292 4628137,299291.5 4628137.0,299291 4628137,299290.5 4628137.0))
+         2                  36       0      ----      ----      ----      ----       2      2.77      2.76      2.78      0.01       0      ----      ----      ----      ----  POLYGON ((299291 4628135,299291.0 4628135.5,299291.5 4628135.5,299292.0 4628135.5,299292 4628135,299291.5 4628135.0,299291 4628135))
+         1                  36       0      ----      ----      ----      ----       1      2.30      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((299292.5 4628135.5,299292.5 4628136.0,299293 4628136,299293.0 4628135.5,299292.5 4628135.5))
+         1                  35       1      6.93      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((299296.0 4628167.5,299296 4628168,299296.5 4628168.0,299296.5 4628167.5,299296.0 4628167.5))
+         1                  35       1      6.95      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((299297 4628168,299297.0 4628168.5,299297.5 4628168.5,299297.5 4628168.0,299297 4628168))
+         8                  36       8      6.45      5.86      6.81      0.32       0      ----      ----      ----      ----       0      ----      ----      ----      ----  MULTIPOLYGON (((299305.5 4628145.5,299305.5 4628146.0,299306 4628146,299306.0 4628146.5,299306.5 4628146.5,299306.5 4628146.0,299307 4628146,299307.5 4628146.0,299307.5 4628145.5,299307.0 4628145.5,299307 4628145,299306.5 4628145.0,299306 4628145,299306.0 4628145.5,299305.5 4628145.5)),((299307.5 4628146.0,299307.5 4628146.5,299308.0 4628146.5,299308 4628146,299307.5 4628146.0)))
+         1                  36       1      6.95      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((299339.0 4628162.5,299339 4628163,299339.5 4628163.0,299339.5 4628162.5,299339.0 4628162.5))
+         1                  36       1      6.84      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((299340.5 4628163.0,299340.5 4628163.5,299341.0 4628163.5,299341 4628163,299340.5 4628163.0))

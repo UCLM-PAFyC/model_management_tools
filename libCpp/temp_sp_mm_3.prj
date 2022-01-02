@@ -1,5 +1,0 @@
-Solar Park Project
-- Number of processes ......................................# 1
-- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_PHDB
-  - Database file name .....................................# "H:/Eiffage/SolarPark/PozoCanada/model_management/MmTools_sp_pozocanada.sqlite"
-  - Photogrammetry project database file name ..............# "H:/Eiffage/VueloFlirDuoProR/phTools/PhTool_FlirPozoCanada.sqlite"

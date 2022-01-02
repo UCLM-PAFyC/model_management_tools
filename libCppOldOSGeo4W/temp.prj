@@ -1,0 +1,13 @@
+Model Database Management Project
+- Number of processes ......................................# 2
+- Process (CREATE_DB,ADD_ROI,...) ..........................# CREATE_DB
+  - Database file name .....................................# "D:/GDALCubesProjects/AmalTunez/GDALCubes_AmalTunez.sqlite"
+  - Database CRS (libCRS/EPSG/proj4/wkt) ...................# 32632
+    Height type (ORTHOMETRIC_HEIGHT,ELLIPSOID_HEIGHT) ......# ORTHOMETRIC_HEIGHT
+  - Project Type (Generic,PowerLine,SolarPark) .............# pafyctools
+  - Project parameters (par1@v@value1@p@par2@v@value2...) ..# Author@v@@p@Company@v@
+- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_ROI
+  - Database file name .....................................# "D:/GDALCubesProjects/AmalTunez/GDALCubes_AmalTunez.sqlite"
+  - ROI File ...............................................# "D:/GDALCubesProjects/AmalTunez/roi/roi_32632.shp"
+    Field id (None for all features ) ......................# None
+      Field id values (separed by ; ignored si None) .......# 

@@ -37,19 +37,46 @@ import sys
 from PyQt5.QtWidgets import QMessageBox,QFileDialog,QTabWidget,QInputDialog,QLineEdit
 from PyQt5.QtCore import QSettings, QTranslator, qVersion, QCoreApplication, QFileInfo, QDir, QObject, QFile
 from qgis.core import QgsApplication, QgsDataSourceUri
+
+from osgeo import osr
+projVersionMajor = osr.GetPROJVersionMajor()
+# projVersionMinor = osr.GetPROJVersionMinor()
 pluginsPath = QFileInfo(QgsApplication.qgisUserDatabaseFilePath()).path()
 pluginPath = os.path.dirname(os.path.realpath(__file__))
 pluginPath = os.path.join(pluginsPath, pluginPath)
-libCppPath = os.path.join(pluginPath, 'libCpp')
+libCppPath = None
+if projVersionMajor < 8:
+    libCppPath = os.path.join(pluginPath, 'libCppOldOSGeo4W')
+else:
+    libCppPath = os.path.join(pluginPath, 'libCpp')
+# libCppPath = os.path.join(pluginPath, 'libCpp')
 existsPluginPath = QDir(libCppPath).exists()
 sys.path.append(pluginPath)
 sys.path.append(libCppPath)
 os.environ["PATH"] += os.pathsep + libCppPath
-from libCpp.libPyModelManagementTools import IPyMMTProject
+
+ModelManagementToolsDockWidget = None
+IPyMMTProject = None
+if projVersionMajor < 8:
+    from .model_management_tools_dockwidget import ModelManagementToolsDockWidget
+    from libCppOldOSGeo4W.libPyModelManagementTools import IPyMMTProject
+else:
+    from .model_management_tools_dockwidget import ModelManagementToolsDockWidget
+    #     from libCpp.libPyModelManagementTools import IPyMMTProject
+
+# pluginsPath = QFileInfo(QgsApplication.qgisUserDatabaseFilePath()).path()
+# pluginPath = os.path.dirname(os.path.realpath(__file__))
+# pluginPath = os.path.join(pluginsPath, pluginPath)
+# libCppPath = os.path.join(pluginPath, 'libCpp')
+# existsPluginPath = QDir(libCppPath).exists()
+# sys.path.append(pluginPath)
+# sys.path.append(libCppPath)
+# os.environ["PATH"] += os.pathsep + libCppPath
+# from libCpp.libPyModelManagementTools import IPyMMTProject
 from . import MMTDefinitions
 
 # Import the code for the DockWidget
-from .model_management_tools_dockwidget import ModelManagementToolsDockWidget
+# from .model_management_tools_dockwidget import ModelManagementToolsDockWidget
 
 class ModelManagementTools:
     """QGIS Plugin Implementation."""
@@ -65,6 +92,7 @@ class ModelManagementTools:
 
         # pydevd.settrace('localhost',port=54100,stdoutToServer=True,stderrToServer=True)
 
+        self.projVersionMajor = projVersionMajor
         self.path_plugin = pluginPath
         self.path_libCpp = libCppPath
         self.current_plugin_name = MMTDefinitions.CONST_SETTINGS_PLUGIN_NAME
@@ -239,54 +267,67 @@ class ModelManagementTools:
     def run(self):
         """Run method that loads and starts the plugin"""
 
-        if not self.pluginIsActive:
-            egm08UncompressFileName = libCppPath + "/" + MMTDefinitions.CONST_EGM08_25_FILE_NAME
-            if not QFile.exists(egm08UncompressFileName):
-                egm08compressFileName = libCppPath + "/" + MMTDefinitions.CONST_EGM08_25_COMPRESS_FILE_NAME
-                text = "Before opening the plugin for the first time"
-                text += "\nyou must unzip the file:\n"
-                text += egm08compressFileName
-                text += "\nin the same path using 7-zip, https://www.7-zip.org/"
-                text += "\n\nThe unzipped file could not be uploaded to Github due to account limitations"
-                msgBox = QMessageBox()
-                msgBox.setIcon(QMessageBox.Information)
-                # msgBox.setWindowTitle(self.windowTitle)
-                msgBox.setText(text)
-                msgBox.exec_()
-                return
-            self.iPyProject = IPyMMTProject()
-            self.iPyProject.setPythonModulePath(self.path_libCpp)
-            ret = self.iPyProject.initialize()
-            if ret[0] == "False":
-                msgBox = QMessageBox()
-                msgBox.setIcon(QMessageBox.Information)
-                # msgBox.setWindowTitle(self.windowTitle)
-                msgBox.setText("\n" + ret[1])
-                msgBox.exec_()
-                return
-            path_file_qsettings = self.path_plugin + '/' + MMTDefinitions.CONST_SETTINGS_FILE_NAME
-            self.settings = QSettings(path_file_qsettings, QSettings.IniFormat)
+        if self.projVersionMajor < 8:
+            if not self.pluginIsActive:
+                egm08UncompressFileName = libCppPath + "/" + MMTDefinitions.CONST_EGM08_25_FILE_NAME
+                if not QFile.exists(egm08UncompressFileName):
+                    egm08compressFileName = libCppPath + "/" + MMTDefinitions.CONST_EGM08_25_COMPRESS_FILE_NAME
+                    text = "Before opening the plugin for the first time"
+                    text += "\nyou must unzip the file:\n"
+                    text += egm08compressFileName
+                    text += "\nin the same path using 7-zip, https://www.7-zip.org/"
+                    text += "\n\nThe unzipped file could not be uploaded to Github due to account limitations"
+                    msgBox = QMessageBox()
+                    msgBox.setIcon(QMessageBox.Information)
+                    # msgBox.setWindowTitle(self.windowTitle)
+                    msgBox.setText(text)
+                    msgBox.exec_()
+                    return
 
-            self.pluginIsActive = True
+        if self.projVersionMajor >= 8:
+            text = "<p>Invalid plugin for this QGIS version</p>"
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            # msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setTextFormat(Qt.RichText)
+            msgBox.setText(text)
+            msgBox.exec_()
+            return
 
-            #print "** STARTING ModelManagementTools"
+        self.iPyProject = IPyMMTProject()
+        self.iPyProject.setPythonModulePath(self.path_libCpp)
+        ret = self.iPyProject.initialize()
+        if ret[0] == "False":
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            # msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("\n" + ret[1])
+            msgBox.exec_()
+            return
+        path_file_qsettings = self.path_plugin + '/' + MMTDefinitions.CONST_SETTINGS_FILE_NAME
+        self.settings = QSettings(path_file_qsettings, QSettings.IniFormat)
 
-            # dockwidget may not exist if:
-            #    first run of plugin
-            #    removed on close (see self.onClosePlugin method)
-            if self.dockwidget == None:
-                # Create the dockwidget (after translation) and keep reference
-                self.dockwidget = ModelManagementToolsDockWidget(self.iface,
-                                                                 self.path_plugin,
-                                                                 self.path_libCpp,
-                                                                 self.current_plugin_name,
-                                                                 self.settings,
-                                                                 self.iPyProject)
+        self.pluginIsActive = True
 
-            # connect to provide cleanup on closing of dockwidget
-            self.dockwidget.closingPlugin.connect(self.onClosePlugin)
+        #print "** STARTING ModelManagementTools"
 
-            # show the dockwidget
-            # TODO: fix to allow choice of dock location
-            self.iface.addDockWidget(Qt.LeftDockWidgetArea, self.dockwidget)
-            self.dockwidget.show()
+        # dockwidget may not exist if:
+        #    first run of plugin
+        #    removed on close (see self.onClosePlugin method)
+        if self.dockwidget == None:
+            # Create the dockwidget (after translation) and keep reference
+            self.dockwidget = ModelManagementToolsDockWidget(self.iface,
+                                                             self.projVersionMajor,
+                                                             self.path_plugin,
+                                                             self.path_libCpp,
+                                                             self.current_plugin_name,
+                                                             self.settings,
+                                                             self.iPyProject)
+
+        # connect to provide cleanup on closing of dockwidget
+        self.dockwidget.closingPlugin.connect(self.onClosePlugin)
+
+        # show the dockwidget
+        # TODO: fix to allow choice of dock location
+        self.iface.addDockWidget(Qt.LeftDockWidgetArea, self.dockwidget)
+        self.dockwidget.show()
