@@ -62,7 +62,7 @@ if projVersionMajor < 8:
     from libCppOldOSGeo4W.libPyModelManagementTools import IPyMMTProject
 else:
     from .model_management_tools_dockwidget import ModelManagementToolsDockWidget
-    #     from libCpp.libPyModelManagementTools import IPyMMTProject
+    from libCpp.libPyModelManagementTools import IPyMMTProject
 
 # pluginsPath = QFileInfo(QgsApplication.qgisUserDatabaseFilePath()).path()
 # pluginPath = os.path.dirname(os.path.realpath(__file__))
@@ -283,16 +283,15 @@ class ModelManagementTools:
                     msgBox.setText(text)
                     msgBox.exec_()
                     return
-
-        if self.projVersionMajor >= 8:
-            text = "<p>Invalid plugin for this QGIS version</p>"
-            msgBox = QMessageBox()
-            msgBox.setIcon(QMessageBox.Information)
-            # msgBox.setWindowTitle(self.windowTitle)
-            msgBox.setTextFormat(Qt.RichText)
-            msgBox.setText(text)
-            msgBox.exec_()
-            return
+        # if self.projVersionMajor >= 8:
+        #     text = "<p>Invalid plugin for this QGIS version</p>"
+        #     msgBox = QMessageBox()
+        #     msgBox.setIcon(QMessageBox.Information)
+        #     # msgBox.setWindowTitle(self.windowTitle)
+        #     msgBox.setTextFormat(Qt.RichText)
+        #     msgBox.setText(text)
+        #     msgBox.exec_()
+        #     return
 
         self.iPyProject = IPyMMTProject()
         self.iPyProject.setPythonModulePath(self.path_libCpp)

@@ -728,7 +728,7 @@
         <Description>Output path for report files</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_PozoCanada/SolarPark/reports_20211222</Value>
+        <Value>C:/uclm/Ejemplo_PozoCanada/SolarPark/reports_20220211</Value>
     </Parameter>
     <Parameter>
         <Command>6. Report Hot spots</Command>

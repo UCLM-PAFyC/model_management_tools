@@ -93,6 +93,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             self.isModelManagementPlugin = True
             self.plugin_name = MMTDefinitions.CONST_SETTINGS_PLUGIN_NAME
         self.setupUi(self)
+        # self.pluginPointCloudToolsInstance = None
         self.pluginPointCloudToolsInstance = utils.plugins['point_cloud_tools']
         self.pluginPhotogrammetryToolsInstance = utils.plugins['photogrammetry_tools']
         self.initialize()
