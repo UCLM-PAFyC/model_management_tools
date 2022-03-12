@@ -1,0 +1,17 @@
+Help about operations syntax in GdalCubes
+
+- Example 1, compute NDVI from format with named bands:
+  %>%select_bands(c("RED","NIR"))%>%apply_pixel(c("(NIR-RED)/(NIR+RED)"),names="NDVI")
+- Example 2, compute NDVI from format with numered bands:
+  %>%select_bands(c("RED","NIR"))%>%apply_pixel(c("(NIR-RED)/(NIR+RED)"),names="NDVI")
+- Example 3, select a band by name
+  %>%select_bands(c("VV"))
+  %>%select_bands(c("VH")) 
+- Example 4, %>%select_bands(c("VH"))  
+ 
+- Example, zonal_statistics
+zonal_statistics(raster_cube_1,"D:/GDALCubesProjects/AmalTunez/parcelas/parcelas.gpkg",
+expr = c("mean(VV)","max(VV)","min(VV)","sd(VV)"),
+overwrite=TRUE,
+out_path="D:/GDALCubesProjects/AmalTunez/parcelas/parcelas_out.gpkg")
+    

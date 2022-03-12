@@ -1,0 +1,18 @@
+{
+  "description" : "Collection format for EartEngine S2_SR NDVI computation",
+  "references" : "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR",
+  "tags" : ["S2_SR", "EartEngine", "PAFYC", "UCLM", "ndvi"],
+  "pattern" : ".*\\.tif", 
+  "images":{
+    "pattern" : ".*(.{15}_.{15}_.*)\\.tif"
+  },
+  "datetime" : {
+    "pattern" : ".*.{15}_(.{15})_.*\\.tif",
+    "format" : "%Y%m%dT%H%M%S"
+  },
+  "bands" : {
+    "ndvi" : {
+      "pattern" : ".+"
+    }
+  }
+}

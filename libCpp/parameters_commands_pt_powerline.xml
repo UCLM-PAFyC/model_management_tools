@@ -1,0 +1,907 @@
+<!DOCTYPE ParametersManager>
+<ParametersManager version="1.1">
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_DistanceBetweenPoints</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Distance between points in catenary</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.50</Value>
+        <MaximumValue>10.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_LinearThresholdConvergenceLeastSquaresAdjustments</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Linear threshold for converge in least squares adjustments</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.10</Value>
+        <MaximumValue>0.50</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_LinearTolerancePointsEstimation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Linear tolerance in point cloud profile points estimation process</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.40</Value>
+        <MaximumValue>1.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_MaximumNumberOfIterationsInsLeastSquaresAdjustments</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Maximum number of iterations in least squares adjustments</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>10</Value>
+        <MaximumValue>1000</MaximumValue>
+        <MinimumValue>2</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_MinimumNumberOfInliersPointsInProfilePointsEstimation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Minimum number of inliers points in a profile in points estimation process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>2</Value>
+        <MaximumValue>100</MaximumValue>
+        <MinimumValue>2</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_MinimumNumberOfPointsInProfilePointsEstimation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Minimum number of points in a profile in points estimation process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>2</Value>
+        <MaximumValue>100</MaximumValue>
+        <MinimumValue>2</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_NumberOfExtremePointsCatenaryEstimation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Number of points in extremes and center for combinations in catenary estimation</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>5</Value>
+        <MaximumValue>100</MaximumValue>
+        <MinimumValue>2</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Catenaries estimation from wires groups</Command>
+        <Code>CEWG_ProcessOnlyEnabledWiresGroups</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled wires groups</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_BufferAreaSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Buffer area for point cloud points</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>50.000</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>1.000</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_ClassesToIgnore</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer numbers vector</Type>
+        <Description>Classes to ignore</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>7;8;9;10;11;12</Value>
+        <MaximumValue>13;13;13;13;13;13</MaximumValue>
+        <MinimumValue>0;0;0;0;0;0</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_ComputeWindDeviationUsingMaximumSag</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Instead to use maximum wind deviation parameter, compute using maximum sag</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_GroupsHazardAreasConnectionDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Times of area size for connect hazard areas</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>1</Value>
+        <MaximumValue>100</MaximumValue>
+        <MinimumValue>0</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MaximumCellsConnectedGroupsHazardAreas</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Maximum Cells connected groups hazard areas</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>100</Value>
+        <MaximumValue>1000</MaximumValue>
+        <MinimumValue>0</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MaximumStdThresholdCatenary</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum standard deviation value in the catenary to be used as a wire geometry model</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.40</Value>
+        <MaximumValue>1.00</MaximumValue>
+        <MinimumValue>0.05</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MaximumWindDeviation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum wind deviation</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>2.00</Value>
+        <MaximumValue>20.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MinimumAreaSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum area size</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.50</Value>
+        <MaximumValue>10.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MinimumDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum distance</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>5.00</Value>
+        <MaximumValue>20.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MinimumDistanceByFall</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum distance by fall</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.00</Value>
+        <MaximumValue>20.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MinimumFreeHeight</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum free height</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>6.00</Value>
+        <MaximumValue>30.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_ProcessOnlyEnabledWiresGroups</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled pylons connections and wires groups</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_VegetationGrowthModelConfidenceLevel</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Confidence level for vegetation growth model</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>68%;90%;95%;99%</ValueList>
+        <Value>90%</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_VegetationGrowthModelFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Vegetation growth model file, build with point cloud tools internal process</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Zamora_1/Vegetation_Height_Growth/VegetationGrowthModel.txt</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_YearsExtrapolation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Years for the extrapolation to the future of the growth model, 0 no extrapolation</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>0</Value>
+        <MaximumValue>50</MaximumValue>
+        <MinimumValue>0</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Determination of hazard areas</Command>
+        <Code>DHA_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Extract electric pylons and connections</Command>
+        <Code>EEPC_ArmWidth</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum arms width, from axis</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>8.0</Value>
+        <MaximumValue>20.0</MaximumValue>
+        <MinimumValue>2.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Extract electric pylons and connections</Command>
+        <Code>EEPC_LowerArmHeight</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Lower arm height</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>15.0</Value>
+        <MaximumValue>25.0</MaximumValue>
+        <MinimumValue>5.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Extract electric pylons and connections</Command>
+        <Code>EEPC_MaximumHeightPoints</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum height of points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>meters</Unit>
+        <Value>45.0</Value>
+        <MaximumValue>80.0</MaximumValue>
+        <MinimumValue>1.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Extract electric pylons and connections</Command>
+        <Code>EEPC_MinimumHeightWires</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum height of wires</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>meters</Unit>
+        <Value>6.0</Value>
+        <MaximumValue>12.0</MaximumValue>
+        <MinimumValue>1.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Extract electric pylons and connections</Command>
+        <Code>EEPC_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Extract electric pylons and connections</Command>
+        <Code>EEPC_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar_2019.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_OutputPath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Output path for point cloud files, empty for use the same of original files</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value></Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_PointsSeparationInCatenaries</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Separation in catenary points</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.20</Value>
+        <MaximumValue>1.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_ProcessOnlyEnabledHazardAreas</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled hazard areas</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_ProcessOnlyEnabledHazardAreasMsh</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled hazard areasMsh</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_ProcessOnlyEnabledPylons</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled pylons</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_ProcessOnlyEnabledWiresGroups</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled wires groups</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_ReplaceAltitudeWithHeightOverGround</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Replace altitude with height over ground</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_SuffixOutputFiles</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Suffix for output files</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>_updated</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_class_number_for_catenary</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Class number for catenary points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>14</Value>
+        <MaximumValue>20</MaximumValue>
+        <MinimumValue>13</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_class_number_for_catenary_msh</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Class number for maximum hypothesis sag catenary points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>17</Value>
+        <MaximumValue>20</MaximumValue>
+        <MinimumValue>13</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_class_number_for_hazard_area</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Class number for hazard area points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>20</Value>
+        <MaximumValue>20</MaximumValue>
+        <MinimumValue>13</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_class_number_for_hazard_area_msh</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Class number for maximum hypothesis sag hazard area points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>19</Value>
+        <MaximumValue>20</MaximumValue>
+        <MinimumValue>13</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_class_number_for_pylons</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Class number for pylons points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>15</Value>
+        <MaximumValue>20</MaximumValue>
+        <MinimumValue>13</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_class_number_for_wires_group</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Class number for wires group points</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>13</Value>
+        <MaximumValue>20</MaximumValue>
+        <MinimumValue>13</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Export results to point cloud files</Command>
+        <Code>ETPCFS_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>X:/EjemplosLidarEiffage/zamora/lidar_pnoa/zamora_dtm_pnoa_lidar.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Extract wires groups from connections</Command>
+        <Code>EWGC_ClusterTolerance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum distance between points in a cluster</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>2.00</Value>
+        <MaximumValue>10.00</MaximumValue>
+        <MinimumValue>0.01</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Extract wires groups from connections</Command>
+        <Code>EWGC_MinimumClusterSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Integer number</Type>
+        <Description>Minimum number of points in a cluster</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>100</Value>
+        <MaximumValue>1000000</MaximumValue>
+        <MinimumValue>5</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Extract wires groups from connections</Command>
+        <Code>EWGC_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Extract wires groups from connections</Command>
+        <Code>EWGC_ProcessOnlyEnabledConnections</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled connections</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Remove hazard areas</Command>
+        <Code>RHA_ProcessOnlyEnabledConnections</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled connections</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Remove wires groups from connections</Command>
+        <Code>RWGC_ProcessOnlyEnabledConnections</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled connections</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_DistanceBetweenPointsInCatenary</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Distance between points in catenary.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>0.5</Value>
+        <MaximumValue>2.0</MaximumValue>
+        <MinimumValue>0.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_MaximumStdThresholdCatenaryFromPoints</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum standard deviation value in the catenary from points to be used as a wire geometry model</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.40</Value>
+        <MaximumValue>1.00</MaximumValue>
+        <MinimumValue>0.05</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_MaximumVerticalDistanceBetweenWires</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum vertical distance between wires, for wires without geometry from points.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>18.0</Value>
+        <MaximumValue>50.0</MaximumValue>
+        <MinimumValue>0.5</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_MinimumSafetyGroundDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum value for safety ground distance.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>10.0</Value>
+        <MaximumValue>12.0</MaximumValue>
+        <MinimumValue>6.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_PowerlineVoltage</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Powerline voltage (kv)</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>20;66;132;220;400</ValueList>
+        <Value>400</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_ProcessOnlyEnabledConnections</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled connections</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_ProcessOnlyEnabledWiresGroups</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled wires groups</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireBreakingCoefficient</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire breaking coefficient</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>3.0</Value>
+        <MaximumValue>4.0</MaximumValue>
+        <MinimumValue>2.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireBreakingTension</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire breaking tension (daN)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>8456.0</Value>
+        <MaximumValue>18000.0</MaximumValue>
+        <MinimumValue>500.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireCoefficientLinearThermalExpansion</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire coefficient of linear thermal expansion (ºC-1)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>0.000018900</Value>
+        <MaximumValue>0.000025000</MaximumValue>
+        <MinimumValue>0.000015000</MinimumValue>
+        <PrintPrecision>9</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireDiameter</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire diameter (mm)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>21.8</Value>
+        <MaximumValue>32.0</MaximumValue>
+        <MinimumValue>5.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireElasticModulus</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire elastic modulus (daN/mm2)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>7553.0</Value>
+        <MaximumValue>9000.0</MaximumValue>
+        <MinimumValue>5000.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireMaximumDistanceFromAxis</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire maximum distance from axis, for wires without geometry from points.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>8.0</Value>
+        <MaximumValue>20.0</MaximumValue>
+        <MinimumValue>0.5</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireSection</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire section (mm2)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>281.1</Value>
+        <MaximumValue>800.0</MaximumValue>
+        <MinimumValue>14.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireWeight</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire weight (daN/m)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>0.977</Value>
+        <MaximumValue>3.000</MaximumValue>
+        <MinimumValue>0.150</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif</Value>
+    </Parameter>
+</ParametersManager>
