@@ -29,7 +29,7 @@ from decimal import Decimal
 from PyQt5.QtCore import QSettings, QTranslator, qVersion, QCoreApplication, QFileInfo, QDir, QObject
 from PyQt5.QtWidgets import QMessageBox,QFileDialog,QTabWidget,QInputDialog,QLineEdit
 from PyQt5.QtWidgets import QDockWidget
-from qgis.core import QgsApplication, QgsDataSourceUri
+from qgis.core import QgsApplication, QgsDataSourceUri,QgsProject, QgsCoordinateReferenceSystem
 # pluginsPath = QFileInfo(QgsApplication.qgisUserDatabaseFilePath()).path()
 # pluginPath = os.path.dirname(os.path.realpath(__file__))
 # pluginPath = os.path.join(pluginsPath, pluginPath)
@@ -55,8 +55,24 @@ from PyQt5.QtCore import pyqtSignal
 
 from qgis import utils
 
-FORM_CLASS, _ = uic.loadUiType(os.path.join(
-    os.path.dirname(__file__), 'model_management_tools_dockwidget_base.ui'))
+from qgis.core import Qgis
+qgis_version_number_str = Qgis.QGIS_VERSION.split('-')[0]
+qgis_version_first_number = int(qgis_version_number_str.split('.')[0])
+qgis_version_second_number = int(qgis_version_number_str.split('.')[1])
+qgis_version_third_number = int(qgis_version_number_str.split('.')[2])
+qgis_version_second_number_change_buffer_parameters = 20
+
+from osgeo import osr
+projVersionMajor = osr.GetPROJVersionMajor()
+
+FORM_CLASS = None
+
+if projVersionMajor < 8:
+    FORM_CLASS, _ = uic.loadUiType(os.path.join(
+        os.path.dirname(__file__), 'model_management_tools_dockwidget_base_old_osgeo.ui'))
+else:
+    FORM_CLASS, _ = uic.loadUiType(os.path.join(
+        os.path.dirname(__file__), 'model_management_tools_dockwidget_base.ui'))
 
 class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
 
@@ -679,6 +695,26 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             msgBox.setText("Error:\n"+ret[1])
             msgBox.exec_()
             return
+
+        self.crsEpsgCode = -1
+        self.verticalCrsEpsgCode = -1
+        if self.projVersionMajor >=8:
+            self.projectQgsProjectionSelectionWidget.crsChanged.connect(self.setCrs)
+            self.projectQgsProjectionSelectionWidget.cleared.connect(self.setCrs)
+            self.verticalCRSsComboBox.addItem(MMTDefinitions.CONST_ELLIPSOID_HEIGHT)
+        self.projectQgsProjectionSelectionWidget.setCrs(QgsCoordinateReferenceSystem(MMTDefinitions.CONST_DEFAULT_CRS))
+
+        # if self.projVersionMajor >=8:
+        #     self.addPCFsQgsProjectionSelectionWidget.crsChanged.connect(self.setCrsAddPCFs)
+        #     self.addPCFsQgsProjectionSelectionWidget.cleared.connect(self.setCrsAddPCFs)
+        #     self.addPCFsVerticalCRSsComboBox.addItem(PCTDefinitions.CONST_ELLIPSOID_HEIGHT)
+        # self.addPCFsQgsProjectionSelectionWidget.setCrs(QgsCoordinateReferenceSystem(PCTDefinitions.CONST_DEFAULT_CRS))
+        #
+        # if self.projVersionMajor >=8:
+        #     self.ppToolsIPCFsQgsProjectionSelectionWidget.crsChanged.connect(self.setCrsPpToolsIPCFs)
+        #     self.ppToolsIPCFsQgsProjectionSelectionWidget.cleared.connect(self.setCrsPpToolsIPCFs)
+        #     self.ppToolsIPCFsVerticalCRSsComboBox.addItem(PCTDefinitions.CONST_ELLIPSOID_HEIGHT)
+        # self.ppToolsIPCFsQgsProjectionSelectionWidget.setCrs(QgsCoordinateReferenceSystem(PCTDefinitions.CONST_DEFAULT_CRS))
 
         # self.iPyModelManagementToolsProject=IPyModelManagementToolsProject()
         # self.iPyModelManagementToolsProject.setPythonModulePath(libCppPath)
@@ -2495,4 +2531,86 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             msgBox.setText("Process completed successfully")
             msgBox.exec_()
         # self.loadElectricPylonsLayer()
+        return
+
+    def setCrs(self):
+        crs = self.projectQgsProjectionSelectionWidget.crs()
+        isValidCrs = crs.isValid()
+        crsAuthId = crs.authid()
+        if not "EPSG:" in crsAuthId:
+            msgBox = QMessageBox(self)
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("Selected CRS is not EPSG")
+            msgBox.exec_()
+            self.projectQgsProjectionSelectionWidget.setCrs(
+                QgsCoordinateReferenceSystem(MMTDefinitions.CONST_DEFAULT_CRS))
+            return
+        crsEpsgCode = int(crsAuthId.replace('EPSG:',''))
+        crsOsr = osr.SpatialReference()  # define test1
+        if crsOsr.ImportFromEPSG(crsEpsgCode) != 0:
+            msgBox = QMessageBox(self)
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("Error importing OSR CRS from EPSG code" + str(crsEpsgCode))
+            msgBox.exec_()
+            self.projectQgsProjectionSelectionWidget.setCrs(
+                QgsCoordinateReferenceSystem(MMTDefinitions.CONST_DEFAULT_CRS))
+            return
+        if not crsOsr.IsProjected():
+            msgBox = QMessageBox(self)
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("Selected CRS is not a projected CRS")
+            msgBox.exec_()
+            self.projectQgsProjectionSelectionWidget.setCrs(
+                QgsCoordinateReferenceSystem(MMTDefinitions.CONST_DEFAULT_CRS))
+            return
+        self.setVerticalCRSs(crsEpsgCode)
+        crsEpsgCodeString = 'EPSG:'+str(crsEpsgCode)
+        # self.addPCFsQgsProjectionSelectionWidget.setCrs(
+        #     QgsCoordinateReferenceSystem(crsEpsgCodeString))
+        self.crsEpsgCode = crsEpsgCode
+
+    def setVerticalCRSs(self,crsEpsgCode):
+        self.verticalCRSsComboBox.clear()
+        self.plsfVerticalCRSsComboBox.clear()
+        self.spsfVerticalCRSsComboBox.clear()
+        self.verticalCRSsComboBox.addItem(MMTDefinitions.CONST_ELLIPSOID_HEIGHT)
+        self.plsfVerticalCRSsComboBox.addItem(MMTDefinitions.CONST_ELLIPSOID_HEIGHT)
+        self.spsfVerticalCRSsComboBox.addItem(MMTDefinitions.CONST_ELLIPSOID_HEIGHT)
+        ret = self.iPyProject.mmtGetVerticalCRSs(crsEpsgCode)
+        if ret[0] == "False":
+            msgBox = QMessageBox(self)
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("Error:\n"+ret[1])
+            msgBox.exec_()
+            # self.projectsComboBox.setCurrentIndex(0)
+            return
+        else:
+            cont = 0
+            for value in ret:
+                if cont > 0:
+                    # strCrs = qLidarDefinitions.CONST_EPSG_PREFIX + str(value)
+                    self.verticalCRSsComboBox.addItem(value)
+                    self.plsfVerticalCRSsComboBox.addItem(value)
+                    self.spsfVerticalCRSsComboBox.addItem(value)
+                cont = cont + 1
+            # msgBox = QMessageBox(self)
+            # msgBox.setIcon(QMessageBox.Information)
+            # msgBox.setWindowTitle(self.windowTitle)
+            # msgBox.setText("Process completed successfully")
+            # msgBox.exec_()
+        strCrs = MMTDefinitions.CONST_EPSG_PREFIX + str(crsEpsgCode)
+        if strCrs == MMTDefinitions.CONST_DEFAULT_CRS:
+            index = self.verticalCRSsComboBox.findText(MMTDefinitions.CONST_DEFAULT_VERTICAL_CRS)#, QtCore.Qt.MatchFixedString)
+            if index > 0:
+                self.verticalCRSsComboBox.setCurrentIndex(index)
+            index = self.plsfVerticalCRSsComboBox.findText(MMTDefinitions.CONST_DEFAULT_VERTICAL_CRS)#, QtCore.Qt.MatchFixedString)
+            if index > 0:
+                self.plsfVerticalCRSsComboBox.setCurrentIndex(index)
+            index = self.spsfVerticalCRSsComboBox.findText(MMTDefinitions.CONST_DEFAULT_VERTICAL_CRS)#, QtCore.Qt.MatchFixedString)
+            if index > 0:
+                self.spsfVerticalCRSsComboBox.setCurrentIndex(index)
         return
