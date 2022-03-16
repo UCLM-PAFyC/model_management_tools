@@ -220,7 +220,7 @@
         <Description>Minimum area size</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>0.50</Value>
+        <Value>1.00</Value>
         <MaximumValue>10.00</MaximumValue>
         <MinimumValue>0.01</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
@@ -415,7 +415,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar_2019.tif</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -902,6 +902,6 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
     </Parameter>
 </ParametersManager>

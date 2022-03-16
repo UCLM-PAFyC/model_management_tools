@@ -1,5 +1,5 @@
 Wires computation for maximum sag hypothesis
-- Project file ...................................: C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/pwl_pnoa_lidar.sqlite
+- Project file ...................................: C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/pwl_pnoa_lidar_new.sqlite
 - Electric pylons connection .....................: EP_3_EP_4
 - Number of wire groups to compute ...............: 4
 - Processing parameters:
@@ -17,7 +17,7 @@ Wires computation for maximum sag hypothesis
   - Minimum safety ground distance (m) ...........: 10.0
   - Safety ground distance (m) ...................: 10.0
   - Digital terrain model file name ..............: C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif
-- Region of interest .............................: POLYGON((300106.2325 4628573.3863,300426.1085 4628735.1189,300433.3279 4628720.8403,300113.4519 4628559.1077,300106.2325 4628573.3863))
+- Region of interest .............................: POLYGON((300106.2325 4628573.3862,300426.1085 4628735.1188,300433.3279 4628720.8402,300113.4519 4628559.1076,300106.2325 4628573.3862))
 - Minimum elevation from dtm .....................: 753.009
 - Maximum elevation from dtm .....................: 760.388
 - Catenary arc length ............................: 359.738

@@ -218,8 +218,14 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
 
     def addPowerlinesFromShpProcess(self):
         altitudeIsMsl = True
-        if self.plsfAltitudeEllipsoidRadioButton.isChecked():
-            altitudeIsMsl = False
+        verticalCrsEpsgCode = -1
+        if self.projVersionMajor < 8:
+            if self.plsfVerticalCRSsComboBox.isChecked():
+                altitudeIsMsl = False
+        else:
+            verticalCrsStr = self.plsfVerticalCRSsComboBox.currentText()
+            if not verticalCrsStr == MMTDefinitions.CONST_ELLIPSOID_HEIGHT:
+                verticalCrsEpsgCode = int(verticalCrsStr.replace('EPSG:',''))
         dbFileName = self.modelManagementConnections[self.projectsComboBox.currentText()]
         if not dbFileName:
             msgBox = QMessageBox(self)
@@ -2559,8 +2565,14 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             return
         solarParkShapefile = self.solarParkFiles[0]
         altitudeIsMsl = True
-        if self.plsfAltitudeEllipsoidRadioButton.isChecked():
-            altitudeIsMsl = False
+        verticalCrsEpsgCode = -1
+        if self.projVersionMajor < 8:
+            if self.spsfVerticalCRSsComboBox.isChecked():
+                altitudeIsMsl = False
+        else:
+            verticalCrsStr = self.spsfVerticalCRSsComboBox.currentText()
+            if not verticalCrsStr == MMTDefinitions.CONST_ELLIPSOID_HEIGHT:
+                verticalCrsEpsgCode = int(verticalCrsStr.replace('EPSG:',''))
         ret = self.iPyProject.mmtSolarParkDefinition(dbFileName,
                                                      solarParkShapefile,
                                                      altitudeIsMsl)

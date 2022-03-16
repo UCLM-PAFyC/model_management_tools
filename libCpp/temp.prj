@@ -1,13 +1,5 @@
 Model Database Management Project
-- Number of processes ......................................# 2
-- Process (CREATE_DB,ADD_ROI,...) ..........................# CREATE_DB
-  - Database file name .....................................# "C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/pwl_pnoa_lidar_new.sqlite"
-  - Database CRS (libCRS/EPSG/proj4/wkt) ...................# 25830
-  - Vertical CRS EPSG Code (-1, ellipsoid) .................# 5782
-  - Project Type (Generic,PowerLine,SolarPark) .............# powerline
-  - Project parameters (par1@v@value1@p@par2@v@value2...) ..# Author@v@@p@Company@v@
-- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_ROI
-  - Database file name .....................................# "C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/pwl_pnoa_lidar_new.sqlite"
-  - ROI File ...............................................# "C:/uclm/Ejemplo_Zamora_1/Definicion_LAT/ROI.shp"
-    Field id (None for all features ) ......................# None
-      Field id values (separed by ; ignored si None) .......# 
+- Number of processes ......................................# 1
+- Process (CREATE_DB,ADD_ROI,...) ..........................# ADD_PCLDB
+  - Database file name .....................................# "C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/pwl_rpas_lidar_new.sqlite"
+  - Point cloud spatialite database file ...................# "C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/pct_rpas_lidar_g20.sqlite"
