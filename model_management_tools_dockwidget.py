@@ -220,7 +220,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         altitudeIsMsl = True
         verticalCrsEpsgCode = -1
         if self.projVersionMajor < 8:
-            if self.plsfVerticalCRSsComboBox.isChecked():
+            if self.plsfAltitudeMslRadioButton.isChecked():
                 altitudeIsMsl = False
         else:
             verticalCrsStr = self.plsfVerticalCRSsComboBox.currentText()
