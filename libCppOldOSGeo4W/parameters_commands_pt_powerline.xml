@@ -91,7 +91,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>false</Value>
+        <Value>true</Value>
     </Parameter>
     <Parameter>
         <Command>Catenaries estimation from wires groups</Command>
@@ -336,7 +336,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Extract electric pylons and connections</Command>
@@ -902,6 +902,6 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/Preprocesamiento/zamora_dtm_pnoa_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
     </Parameter>
 </ParametersManager>

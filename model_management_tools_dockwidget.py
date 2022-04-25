@@ -1422,6 +1422,22 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         # # msgBox.setWindowTitle(self.windowTitle)
         # # msgBox.setText("Process completed successfully")
         # # msgBox.exec_()
+        ret = self.iPyProject.mmtSetProjectManagerTemporalPath(self.projectManagerTemporalPath)
+        if ret[0] == "False":
+            msgBox = QMessageBox(self)
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("Error:\n" + ret[1])
+            msgBox.exec_()
+            return
+        ret = self.iPyProject.mmtSetProjectManagerOutputPath(self.projectManagerOutputPath)
+        if ret[0] == "False":
+            msgBox = QMessageBox(self)
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setWindowTitle(self.windowTitle)
+            msgBox.setText("Error:\n" + ret[1])
+            msgBox.exec_()
+            return
         return
 
     def refreshMapCanvas(self):

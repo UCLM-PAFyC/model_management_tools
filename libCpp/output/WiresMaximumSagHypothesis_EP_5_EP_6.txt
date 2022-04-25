@@ -1,0 +1,67 @@
+Wires computation for maximum sag hypothesis
+- Project file ...................................: C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/RPAS_LIDAR_OLD/pw_old_cuenca_rpas_lidar.sqlite
+- Electric pylons connection .....................: EP_5_EP_6
+- Number of wire groups to compute ...............: 4
+- Processing parameters:
+  - Process only enabled connections .............: True
+  - Process only enabled wires groups ............: True
+  - Powerline voltage (kv) .......................: 400.0
+  - Wire section (mm2) ...........................: 281.1
+  - Wire elastic modulus (daN/mm2) ...............: 7553.0
+  - Wire coef linear thermal expansion (ºC-1) ....: 0.000018900
+  - Wire weight (daN/m) ..........................: 0.977
+  - Wire diameter (mm) ...........................: 21.8
+  - Wire breaking coefficient (daN) ..............: 8456.0
+  - Wire maximum distance from axis (m) ..........: 8.0
+  - Maximum vertical distance between wires (m) ..: 18.0
+  - Minimum safety ground distance (m) ...........: 10.0
+  - Safety ground distance (m) ...................: 10.0
+  - Digital terrain model file name ..............: C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif
+- Wires group ....................................: EP_5:EP_6WG_1
+  - Geometry from discrete points:
+    - Maximum sag ................................: 5.263
+    - Maximum sag distance from origin ...........: 114.500
+  - Catenary adjusted from discrete points:
+    - Maximum sag ................................: 5.137
+    - Maximum sag distance from origin ...........: 115.500
+  - Catenary computed for maximum sag hypothesis:
+    - Maximum sag for input conditions ...........: 7.821
+    - Catenary arc length ........................: 231.720
+    - Catenary maximum sag .......................: 7.836
+    - Catenary maximum sag arc length ............: 115.500
+- Wires group ....................................: EP_5:EP_6WG_2
+  - Geometry from discrete points:
+    - Maximum sag ................................: 5.193
+    - Maximum sag distance from origin ...........: 116.500
+  - Catenary adjusted from discrete points:
+    - Maximum sag ................................: 5.132
+    - Maximum sag distance from origin ...........: 115.800
+  - Catenary computed for maximum sag hypothesis:
+    - Maximum sag for input conditions ...........: 7.850
+    - Catenary arc length ........................: 232.220
+    - Catenary maximum sag .......................: 7.852
+    - Catenary maximum sag arc length ............: 115.800
+- Wires group ....................................: EP_5:EP_6WG_3
+  - Geometry from discrete points:
+    - Maximum sag ................................: 5.152
+    - Maximum sag distance from origin ...........: 115.000
+  - Catenary adjusted from discrete points:
+    - Maximum sag ................................: 4.991
+    - Maximum sag distance from origin ...........: 115.000
+  - Catenary computed for maximum sag hypothesis:
+    - Maximum sag for input conditions ...........: 7.764
+    - Catenary arc length ........................: 230.710
+    - Catenary maximum sag .......................: 7.772
+    - Catenary maximum sag arc length ............: 115.000
+- Wires group ....................................: EP_5:EP_6WG_4
+  - Geometry from discrete points:
+    - Maximum sag ................................: 5.196
+    - Maximum sag distance from origin ...........: 123.000
+  - Catenary adjusted from discrete points:
+    - Maximum sag ................................: 4.977
+    - Maximum sag distance from origin ...........: 114.300
+  - Catenary computed for maximum sag hypothesis:
+    - Maximum sag for input conditions ...........: 7.680
+    - Catenary arc length ........................: 229.200
+    - Catenary maximum sag .......................: 7.687
+    - Catenary maximum sag arc length ............: 114.300

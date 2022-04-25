@@ -179,7 +179,7 @@
         <Description>Output path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/output_s1_vh</Value>
+        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vv/output</Value>
     </Parameter>
     <Parameter>
         <Command>Nested Grid Data Cubes Processes</Command>
@@ -214,7 +214,7 @@
         <Description>Temp path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vh/temp</Value>
+        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vv/temp</Value>
     </Parameter>
     <Parameter>
         <Command>Nested Grid Data Cubes Processes</Command>

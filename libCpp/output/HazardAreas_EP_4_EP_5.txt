@@ -1,0 +1,44 @@
+Determination of hazard areas report
+- Project file .........................: C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/RPAS_LIDAR_OLD/pw_old_cuenca_rpas_lidar.sqlite
+- Electric pylons connection ...........: EP_4_EP_5
+- Number of wire groups ................: 4
+- Processing parameters:
+  - Process only enabled ...............: True
+  - Minimum area size ..................: 0.500
+  - Buffer area size ...................: 50.000
+  - Connection distance ................: 1
+  - Maximum number of connected cells ..:100
+  - DTM raster file ....................: C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif
+  - Wind deviation using maximum sag ...: False
+  - Maximum wind deviation (no if sag) .: 2.000
+  - Minimum distance by fall ...........: 1.000
+  - Minimum free height ................: 6.000
+  - Minimum slope distance .............: 5.000
+  - Point classes to ignore ............: 7,8,9,10,11,12
+  - Catenary threshold .................: 0.400
+- Get Object Points time ......: 286 milliseconds
+- Get Points geometry time ....: 8969 milliseconds
+- Region of interest ..........: POLYGON((635372.0070 4412434.4894,635719.1830 4412556.5094,635752.3410 4412462.1668,635405.1650 4412340.1468,635372.0070 4412434.4894))
+- Number of points in region ..: 308446
+- Number of points to ignore: 
+  - First electric pylon ......: 24138
+  - Second electric pylon .....: 22977
+  - Electric pylons connection : 0
+  - Wires groups ..............: 19941
+- Number of grids .............: 64450
+- Get height grids time .......: 584 milliseconds
+- Get values by grid time .....: 124 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 10 milliseconds
+- Hazard areas groups:  1
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+        37                  29      37      6.37      5.58      6.94      0.39       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((635402.5 4412385.0,635402.5 4412385.5,635402.5 4412386.0,635402.5 4412386.5,635403.0 4412386.5,635403.5 4412386.5,635403.5 4412387.0,635403.5 4412387.5,635404.0 4412387.5,635404.5 4412387.5,635404.5 4412387.0,635405 4412387,635405.5 4412387.0,635405.5 4412386.5,635405.5 4412386.0,635405.5 4412385.5,635406.0 4412385.5,635406 4412386,635406.5 4412386.0,635407 4412386,635407.0 4412386.5,635407.5 4412386.5,635407.5 4412386.0,635407.5 4412385.5,635407.0 4412385.5,635407 4412385,635407.0 4412384.5,635406.5 4412384.5,635406.0 4412384.5,635405.5 4412384.5,635405.5 4412385.0,635405 4412385,635404.5 4412385.0,635404.5 4412384.5,635404.0 4412384.5,635403.5 4412384.5,635403.0 4412384.5,635403 4412385,635402.5 4412385.0))
+- Storing time ................: 98 milliseconds
+- Get values by grid time .....: 140 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 10 milliseconds
+- Hazard areas maximum sag hypothesis groups:  1
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+        51                  29      51      6.30      5.34      6.97      0.47       0      ----      ----      ----      ----       0      ----      ----      ----      ----  MULTIPOLYGON (((635402.5 4412384.5,635402.5 4412385.0,635402.5 4412385.5,635402.5 4412386.0,635402.5 4412386.5,635402.5 4412387.0,635403 4412387,635403.0 4412387.5,635403.5 4412387.5,635404.0 4412387.5,635404.5 4412387.5,635404.5 4412387.0,635405 4412387,635405.0 4412387.5,635405.5 4412387.5,635405.5 4412387.0,635405.5 4412386.5,635406.0 4412386.5,635406 4412386,635406.5 4412386.0,635407 4412386,635407.0 4412386.5,635407.5 4412386.5,635407.5 4412386.0,635407.5 4412385.5,635407.5 4412385.0,635407 4412385,635407.0 4412384.5,635406.5 4412384.5,635406.5 4412384.0,635406 4412384,635405.5 4412384.0,635405.5 4412384.5,635405.0 4412384.5,635405 4412385,635404.5 4412385.0,635404.5 4412384.5,635404.0 4412384.5,635404 4412384,635403.5 4412384.0,635403.5 4412384.5,635403.0 4412384.5,635402.5 4412384.5),(635403 4412387,635403.0 4412386.5,635403.5 4412386.5,635403.5 4412387.0,635403 4412387)),((635402 4412387,635402.0 4412387.5,635402.5 4412387.5,635402.5 4412387.0,635402 4412387)),((635406.0 4412386.5,635406 4412387,635406.5 4412387.0,635407 4412387,635407.0 4412386.5,635406.5 4412386.5,635406.0 4412386.5)))

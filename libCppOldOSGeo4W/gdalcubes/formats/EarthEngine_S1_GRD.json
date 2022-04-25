@@ -12,12 +12,15 @@
   },
   "bands" : {
     "VV" : {
+      "band" : 1,
       "pattern" : ".+"
     },
     "VH" : {
+      "band" : 2,
       "pattern" : ".+"
     },
     "angle" : {
+      "band" : 3,
       "pattern" : ".+"
     }
   }

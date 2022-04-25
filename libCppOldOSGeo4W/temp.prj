@@ -1,5 +1,10 @@
 Model Database Management Project
 - Number of processes ......................................# 1
-- Process (CREATE_DB,ADD_ROI,...) ..........................# ADD_PCLDB
-  - Database file name .....................................# "C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/pwl_lidar_rpas_cuenca.sqlite"
-  - Point cloud spatialite database file ...................# "C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/pct_lidar_rpas_cuenca.sqlite"
+- Process (CREATE_DB,ADD_ROI,...) ..........................# ADD_OPL
+  - Database file name .....................................# "C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/RPAS_LIDAR_OLD/pw_old_cuenca_rpas_lidar.sqlite"
+  - Name (None, empty and no field will be shapefile name)..# 
+  - Overhead Power Line shapefile ..........................# "C:/uclm/Ejemplo_Cuenca/Definicion_LAT/Red_LATs.shp"
+    Field name (case sensitive, None for ignore ) ..........# name
+  - Minimum separation between Electric Pylots (m) .........# 20.0
+  - Electric Pylots base radius (m) ........................# 7.5
+  - Electric Pylots height (m) .............................# 40.0

@@ -1,0 +1,42 @@
+Determination of hazard areas report
+- Project file .........................: C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/RPAS_LIDAR_OLD/pw_old_cuenca_rpas_lidar.sqlite
+- Electric pylons connection ...........: EP_5_EP_6
+- Number of wire groups ................: 4
+- Processing parameters:
+  - Process only enabled ...............: True
+  - Minimum area size ..................: 0.500
+  - Buffer area size ...................: 50.000
+  - Connection distance ................: 1
+  - Maximum number of connected cells ..:100
+  - DTM raster file ....................: C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif
+  - Wind deviation using maximum sag ...: False
+  - Maximum wind deviation (no if sag) .: 2.000
+  - Minimum distance by fall ...........: 1.000
+  - Minimum free height ................: 6.000
+  - Minimum slope distance .............: 5.000
+  - Point classes to ignore ............: 7,8,9,10,11,12
+  - Catenary threshold .................: 0.400
+- Get Object Points time ......: 224 milliseconds
+- Get Points geometry time ....: 7230 milliseconds
+- Region of interest ..........: POLYGON((635719.0628 4412556.4670,635950.7398 4412638.5570,635984.1382 4412544.2992,635752.4612 4412462.2092,635719.0628 4412556.4670))
+- Number of points in region ..: 128474
+- Number of points to ignore: 
+  - First electric pylon ......: 22977
+  - Second electric pylon .....: 9134
+  - Electric pylons connection : 0
+  - Wires groups ..............: 15903
+- Number of grids .............: 38626
+- Get height grids time .......: 171 milliseconds
+- Get values by grid time .....: 66 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 0 milliseconds
+- Hazard areas groups:  0
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+- Storing time ................: 0 milliseconds
+- Get values by grid time .....: 85 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 0 milliseconds
+- Hazard areas maximum sag hypothesis groups:  0
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry

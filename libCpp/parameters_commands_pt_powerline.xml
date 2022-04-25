@@ -91,7 +91,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>Catenaries estimation from wires groups</Command>
@@ -220,7 +220,7 @@
         <Description>Minimum area size</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>1.00</Value>
+        <Value>0.50</Value>
         <MaximumValue>10.00</MaximumValue>
         <MinimumValue>0.01</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
@@ -336,7 +336,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Extract electric pylons and connections</Command>
@@ -347,7 +347,7 @@
         <Description>Maximum arms width, from axis</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>8.0</Value>
+        <Value>7.5</Value>
         <MaximumValue>20.0</MaximumValue>
         <MinimumValue>2.0</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
@@ -389,7 +389,7 @@
         <Description>Minimum height of wires</Description>
         <PrintSize>10</PrintSize>
         <Unit>meters</Unit>
-        <Value>6.0</Value>
+        <Value>12.0</Value>
         <MaximumValue>12.0</MaximumValue>
         <MinimumValue>1.0</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
@@ -415,7 +415,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -500,7 +500,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -600,7 +600,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>X:/EjemplosLidarEiffage/zamora/lidar_pnoa/zamora_dtm_pnoa_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Extract wires groups from connections</Command>
@@ -902,6 +902,6 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
     </Parameter>
 </ParametersManager>

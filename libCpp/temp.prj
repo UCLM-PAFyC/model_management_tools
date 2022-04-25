@@ -1,5 +1,5 @@
 Model Database Management Project
 - Number of processes ......................................# 1
 - Process (CREATE_DB,ADD_ROI,...) ..........................# ADD_PCLDB
-  - Database file name .....................................# "C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/pwl_rpas_lidar_new.sqlite"
-  - Point cloud spatialite database file ...................# "C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/pct_rpas_lidar_g20.sqlite"
+  - Database file name .....................................# "C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/pw_cuenca_rpas_lidar.sqlite"
+  - Point cloud spatialite database file ...................# "C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/pct_cuenca_rpas_lidar_g20.sqlite"
