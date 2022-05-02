@@ -1,0 +1,5 @@
+ANÁLISIS DE PLACAS SOLARES -> HOTSPOTS IN PV MODULES
+Mapa general -> Photovoltaic Park Map
+Mapa de detalle -> Position Map
+Información -> Report Data
+Eiffage Albacete -> TIDOP Research Group, https://tidop.usal.es/

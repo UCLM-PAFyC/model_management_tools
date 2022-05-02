@@ -316,13 +316,13 @@ class Report:
                 item.setText(self.coordTxt)
                 continue
             if item.displayName() == 'info1':
-                txt = 'Zona 1\n'
+                txt = 'Zone 1\n'
                 for i in range(self.idIniZone, self.idIniZone + self.numInfoZone - 1, 1):
                     txt += self.values[i] + '\n'
                 item.setText(txt)
                 continue
             if item.displayName() == 'info2' and int(self.values[self.idNumZones]) > 1:
-                txt = 'Zona 2\n'
+                txt = 'Zone 2\n'
                 zone = 2
                 for i in range(self.idIniZone + self.numInfoZone * (zone - 1),
                                self.idIniZone + self.numInfoZone * (zone - 1) + self.numInfoZone - 1, 1):
@@ -330,7 +330,7 @@ class Report:
                 item.setText(txt)
                 continue
             if item.displayName() == 'info3' and int(self.values[self.idNumZones]) > 2:
-                txt = 'Zona 3\n'
+                txt = 'Zone 3\n'
                 zone = 3
                 for i in range(self.idIniZone + self.numInfoZone * (zone - 1),
                                self.idIniZone + self.numInfoZone * (zone - 1) + self.numInfoZone - 1, 1):
@@ -338,7 +338,7 @@ class Report:
                 item.setText(txt)
                 continue
             if item.displayName() == 'info4' and int(self.values[self.idNumZones]) > 3:
-                txt = 'Zona 4\n'
+                txt = 'Zone 4\n'
                 zone = 4
                 for i in range(self.idIniZone + self.numInfoZone * (zone - 1),
                                self.idIniZone + self.numInfoZone * (zone - 1) + self.numInfoZone - 1, 1):
@@ -346,7 +346,7 @@ class Report:
                 item.setText(txt)
                 continue
             if item.displayName() == 'info5' and int(self.values[self.idNumZones]) > 4:
-                txt = 'Zona 5\n'
+                txt = 'Zone 5\n'
                 zone = 5
                 for i in range(self.idIniZone + self.numInfoZone * (zone - 1),
                                self.idIniZone + self.numInfoZone * (zone - 1) + self.numInfoZone - 1, 1):
@@ -354,7 +354,7 @@ class Report:
                 item.setText(txt)
                 continue
             if item.displayName() == 'info6' and int(self.values[self.idNumZones]) > 5:
-                txt = 'Zona 6\n'
+                txt = 'Zone 6\n'
                 zone = 6
                 for i in range(self.idIniZone + self.numInfoZone * (zone - 1),
                                self.idIniZone + self.numInfoZone * (zone - 1) + self.numInfoZone - 1, 1):

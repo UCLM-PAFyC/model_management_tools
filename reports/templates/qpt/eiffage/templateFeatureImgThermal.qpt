@@ -91,7 +91,7 @@
    </dataDefinedProperties>
    <customproperties/>
   </LayoutObject>
-  <LabelFont style="Normal" description="Arial Narrow,9,-1,5,50,0,0,0,0,0,Normal"/>
+  <LabelFont style="Normal" description="Arial Narrow,10,-1,5,50,0,0,0,0,0,Normal"/>
   <FontColor red="34" green="34" blue="32" alpha="255"/>
  </LayoutItem>
  <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="190.852,207.484,mm" labelText="" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="190.852,207.484,mm" outlineWidthM="0.3,mm" uuid="{e6984b0f-097e-4f37-a252-e7f489b25bea}" frame="false" background="false" visibility="1" templateUuid="{e6984b0f-097e-4f37-a252-e7f489b25bea}" positionLock="false" zValue="31" halign="4" valign="32" id="info6" size="9.66631,58.6945,mm" marginX="0">
@@ -217,7 +217,7 @@
    </dataDefinedProperties>
    <customproperties/>
   </LayoutObject>
-  <LabelFont style="Normal" description="Arial Narrow,9,-1,5,50,0,0,0,0,0,Normal"/>
+  <LabelFont style="Normal" description="Arial Narrow,10,-1,5,50,0,0,0,0,0,Normal"/>
   <FontColor red="34" green="34" blue="32" alpha="255"/>
  </LayoutItem>
  <LayoutItem blendMode="0" opacity="1" referencePoint="0" svgBorderColor="0,0,0,255" position="86.1258,57.0769,mm" file="arrows/NorthArrow_07.svg" pictureRotation="0" northMode="0" itemRotation="0" excludeFromExports="0" frameJoinStyle="miter" type="65640" groupUuid="" positionOnPage="86.1258,57.0769,mm" outlineWidthM="0.3,mm" uuid="{28494dd3-27f4-4753-b8b7-638b5678cb51}" frame="false" background="false" svgFillColor="255,255,255,255" visibility="1" templateUuid="{28494dd3-27f4-4753-b8b7-638b5678cb51}" northOffset="0" positionLock="false" zValue="23" resizeMode="0" pictureHeight="8.33631" svgBorderWidth="0.2" id="north" size="9.32216,8.33631,mm" pictureWidth="8.33631" mapUuid="" anchorPoint="0">
@@ -234,7 +234,7 @@
    <customproperties/>
   </LayoutObject>
  </LayoutItem>
- <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="50.0804,284.021,mm" labelText="TIDOP Research Group, https://tidop.usal.es/ " itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="50.0804,284.021,mm" outlineWidthM="0.3,mm" uuid="{18dd01fb-2281-4a96-848c-2329dc09d659}" frame="false" background="false" visibility="1" templateUuid="{18dd01fb-2281-4a96-848c-2329dc09d659}" positionLock="false" zValue="22" halign="4" valign="32" id="" size="114.125,5.54007,mm" marginX="0">
+ <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="50.0804,284.021,mm" labelText="Eiffage Albacete " itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="50.0804,284.021,mm" outlineWidthM="0.3,mm" uuid="{18dd01fb-2281-4a96-848c-2329dc09d659}" frame="false" background="false" visibility="1" templateUuid="{18dd01fb-2281-4a96-848c-2329dc09d659}" positionLock="false" zValue="22" halign="4" valign="32" id="" size="114.125,5.54007,mm" marginX="0">
   <FrameColor red="0" green="0" blue="0" alpha="255"/>
   <BackgroundColor red="255" green="255" blue="255" alpha="255"/>
   <LayoutObject>
@@ -367,7 +367,7 @@
    <node y="0" x="186"/>
   </nodes>
  </LayoutItem>
- <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="131.463,41.9881,mm" labelText="Position Map" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="round" type="65641" groupUuid="" positionOnPage="131.463,41.9881,mm" outlineWidthM="0.1,cm" uuid="{2f0f946d-ef91-40e1-abbe-66d66a8503ca}" frame="true" background="true" visibility="1" templateUuid="{2f0f946d-ef91-40e1-abbe-66d66a8503ca}" positionLock="false" zValue="20" halign="4" valign="128" id="" size="47.046,7.37268,mm" marginX="0">
+ <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="131.463,41.9881,mm" labelText="Mapa de detalle" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="round" type="65641" groupUuid="" positionOnPage="131.463,41.9881,mm" outlineWidthM="0.1,cm" uuid="{2f0f946d-ef91-40e1-abbe-66d66a8503ca}" frame="true" background="true" visibility="1" templateUuid="{2f0f946d-ef91-40e1-abbe-66d66a8503ca}" positionLock="false" zValue="20" halign="4" valign="128" id="" size="47.046,7.37268,mm" marginX="0">
   <FrameColor red="196" green="9" blue="36" alpha="255"/>
   <BackgroundColor red="196" green="9" blue="36" alpha="255"/>
   <LayoutObject>
@@ -500,7 +500,7 @@
    <node y="0" x="127.731"/>
   </nodes>
  </LayoutItem>
- <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="132.689,153.421,mm" labelText="Report Data" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="132.689,153.421,mm" outlineWidthM="0.3,mm" uuid="{ddaf42b9-8729-446e-84d3-f234b5cb5a7a}" frame="false" background="true" visibility="1" templateUuid="{ddaf42b9-8729-446e-84d3-f234b5cb5a7a}" positionLock="false" zValue="18" halign="4" valign="128" id="" size="45.1993,9.67601,mm" marginX="0">
+ <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="132.689,153.421,mm" labelText="Información" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="132.689,153.421,mm" outlineWidthM="0.3,mm" uuid="{ddaf42b9-8729-446e-84d3-f234b5cb5a7a}" frame="false" background="true" visibility="1" templateUuid="{ddaf42b9-8729-446e-84d3-f234b5cb5a7a}" positionLock="false" zValue="18" halign="4" valign="128" id="" size="45.1993,9.67601,mm" marginX="0">
   <FrameColor red="0" green="0" blue="0" alpha="255"/>
   <BackgroundColor red="196" green="9" blue="36" alpha="255"/>
   <LayoutObject>
@@ -516,7 +516,7 @@
   <LabelFont style="Regular" description="Yu Gothic UI Semibold,14,-1,5,63,0,0,0,0,0,Regular"/>
   <FontColor red="255" green="255" blue="240" alpha="255"/>
  </LayoutItem>
- <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="39.5862,153.996,mm" labelText="Thermal Image" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="39.5862,153.996,mm" outlineWidthM="0.3,mm" uuid="{4701b42c-fda1-446a-bcdb-550a45e5ab0c}" frame="false" background="true" visibility="1" templateUuid="{4701b42c-fda1-446a-bcdb-550a45e5ab0c}" positionLock="false" zValue="17" halign="4" valign="128" id="" size="40.966,8.52601,mm" marginX="0">
+ <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="39.5862,153.996,mm" labelText="Imagen aérea" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="39.5862,153.996,mm" outlineWidthM="0.3,mm" uuid="{4701b42c-fda1-446a-bcdb-550a45e5ab0c}" frame="false" background="true" visibility="1" templateUuid="{4701b42c-fda1-446a-bcdb-550a45e5ab0c}" positionLock="false" zValue="17" halign="4" valign="128" id="" size="40.966,8.52601,mm" marginX="0">
   <FrameColor red="0" green="0" blue="0" alpha="255"/>
   <BackgroundColor red="196" green="9" blue="36" alpha="255"/>
   <LayoutObject>
@@ -642,7 +642,7 @@
   <AtlasMap atlasDriven="1" scalingMode="2" margin="0.10000000000000001"/>
   <labelBlockingItems/>
  </LayoutItem>
- <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="34.8745,41.9881,mm" labelText="Photovoltaic Park Map" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="round" type="65641" groupUuid="" positionOnPage="34.8745,41.9881,mm" outlineWidthM="0.1,cm" uuid="{bdae9f79-e685-4612-bc11-8e574eb10e78}" frame="true" background="true" visibility="1" templateUuid="{bdae9f79-e685-4612-bc11-8e574eb10e78}" positionLock="false" zValue="11" halign="4" valign="128" id="" size="47.046,7.37268,mm" marginX="0">
+ <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="34.8745,41.9881,mm" labelText="Mapa general" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="round" type="65641" groupUuid="" positionOnPage="34.8745,41.9881,mm" outlineWidthM="0.1,cm" uuid="{bdae9f79-e685-4612-bc11-8e574eb10e78}" frame="true" background="true" visibility="1" templateUuid="{bdae9f79-e685-4612-bc11-8e574eb10e78}" positionLock="false" zValue="11" halign="4" valign="128" id="" size="47.046,7.37268,mm" marginX="0">
   <FrameColor red="196" green="9" blue="36" alpha="255"/>
   <BackgroundColor red="196" green="9" blue="36" alpha="255"/>
   <LayoutObject>
@@ -658,7 +658,7 @@
   <LabelFont style="Regular" description="Yu Gothic UI Semibold,14,-1,5,63,0,0,0,0,0,Regular"/>
   <FontColor red="255" green="255" blue="240" alpha="255"/>
  </LayoutItem>
- <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="93.9806,15.2969,mm" labelText="HOTSPOTS IN PV MODULES" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="93.9806,15.2969,mm" outlineWidthM="0.3,mm" uuid="{231bafb4-5da4-44f1-a46e-c0db0e42d57f}" frame="false" background="false" visibility="1" templateUuid="{231bafb4-5da4-44f1-a46e-c0db0e42d57f}" positionLock="false" zValue="10" halign="2" valign="128" id="" size="106.962,12.9312,mm" marginX="0">
+ <LayoutItem blendMode="0" opacity="1" referencePoint="0" position="93.9806,15.2969,mm" labelText="ANÁLISIS DE PLACAS SOLARES" itemRotation="0" excludeFromExports="0" marginY="0" htmlState="0" frameJoinStyle="miter" type="65641" groupUuid="" positionOnPage="93.9806,15.2969,mm" outlineWidthM="0.3,mm" uuid="{231bafb4-5da4-44f1-a46e-c0db0e42d57f}" frame="false" background="false" visibility="1" templateUuid="{231bafb4-5da4-44f1-a46e-c0db0e42d57f}" positionLock="false" zValue="10" halign="2" valign="128" id="" size="106.962,12.9312,mm" marginX="0">
   <FrameColor red="0" green="0" blue="0" alpha="255"/>
   <BackgroundColor red="255" green="255" blue="255" alpha="255"/>
   <LayoutObject>
