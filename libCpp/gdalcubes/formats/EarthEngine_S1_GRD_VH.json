@@ -11,7 +11,7 @@
     "format" : "%Y%m%dT%H%M%S"
   },
   "bands" : {
-    "VV" : {
+    "VH" : {
       "pattern" : ".+"
     }
   }

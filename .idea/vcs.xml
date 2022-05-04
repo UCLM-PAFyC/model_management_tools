@@ -5,5 +5,8 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gdalcubes/gdalcubes_tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gdalcubes/gdalcubes_tools/gdalcubes_create_images_collections" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gdalcubes/gdalcubes_tools/gdalcubes_process_data_cubes" vcs="Git" />
   </component>
 </project>

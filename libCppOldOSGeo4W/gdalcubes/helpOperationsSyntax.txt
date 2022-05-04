@@ -14,4 +14,5 @@ zonal_statistics(raster_cube_1,"D:/GDALCubesProjects/AmalTunez/parcelas/parcelas
 expr = c("mean(VV)","max(VV)","min(VV)","sd(VV)"),
 overwrite=TRUE,
 out_path="D:/GDALCubesProjects/AmalTunez/parcelas/parcelas_out.gpkg")
-    
+c("mean(VV)","max(VV)","min(VV)","sd(VV)")
+c("mean(VH)","max(VH)","min(VH)","sd(VH)")
