@@ -91,7 +91,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>Catenaries estimation from wires groups</Command>
@@ -347,7 +347,7 @@
         <Description>Maximum arms width, from axis</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>6.5</Value>
+        <Value>7.5</Value>
         <MaximumValue>20.0</MaximumValue>
         <MinimumValue>2.0</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
@@ -389,8 +389,8 @@
         <Description>Minimum height of wires</Description>
         <PrintSize>10</PrintSize>
         <Unit>meters</Unit>
-        <Value>15.0</Value>
-        <MaximumValue>15.0</MaximumValue>
+        <Value>12.0</Value>
+        <MaximumValue>12.0</MaximumValue>
         <MinimumValue>1.0</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
     </Parameter>
@@ -415,7 +415,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_dtm.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -500,7 +500,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -600,7 +600,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>X:/EjemplosLidarEiffage/zamora/lidar_pnoa/zamora_dtm_pnoa_lidar.tif</Value>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Extract wires groups from connections</Command>
@@ -611,7 +611,7 @@
         <Description>Maximum distance between points in a cluster</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>1.00</Value>
+        <Value>2.00</Value>
         <MaximumValue>10.00</MaximumValue>
         <MinimumValue>0.01</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
@@ -759,6 +759,18 @@
     </Parameter>
     <Parameter>
         <Command>Wires computation for maximum sag hypothesis</Command>
+        <Code>WCMSH_WireType</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Wire Type</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>47-AL1/8-ST1A;337-AL1/44-ST1A</ValueList>
+        <Value>337-AL1/44-ST1A</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis</Command>
         <Code>WCMSH_ProcessOnlyEnabledConnections</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -783,76 +795,6 @@
     </Parameter>
     <Parameter>
         <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireBreakingCoefficient</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Wire breaking coefficient</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>3.0</Value>
-        <MaximumValue>4.0</MaximumValue>
-        <MinimumValue>2.0</MinimumValue>
-        <PrintPrecision>1</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireBreakingTension</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Wire breaking tension (daN)</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>8456.0</Value>
-        <MaximumValue>18000.0</MaximumValue>
-        <MinimumValue>500.0</MinimumValue>
-        <PrintPrecision>1</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireCoefficientLinearThermalExpansion</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Wire coefficient of linear thermal expansion (ºC-1)</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>0.000018900</Value>
-        <MaximumValue>0.000025000</MaximumValue>
-        <MinimumValue>0.000015000</MinimumValue>
-        <PrintPrecision>9</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireDiameter</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Wire diameter (mm)</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>21.8</Value>
-        <MaximumValue>32.0</MaximumValue>
-        <MinimumValue>5.0</MinimumValue>
-        <PrintPrecision>1</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireElasticModulus</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Wire elastic modulus (daN/mm2)</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>7553.0</Value>
-        <MaximumValue>9000.0</MaximumValue>
-        <MinimumValue>5000.0</MinimumValue>
-        <PrintPrecision>1</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
         <Code>WCMSH_WireMaximumDistanceFromAxis</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -867,7 +809,206 @@
     </Parameter>
     <Parameter>
         <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireSection</Code>
+        <Code>WCMSH_dtm_raster_file</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DTM raster file, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_rpas_lidar_dtm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_DistanceBetweenPointsInCatenary</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Distance between points in catenary.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>0.5</Value>
+        <MaximumValue>2.0</MaximumValue>
+        <MinimumValue>0.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_MaximumStdThresholdCatenaryFromPoints</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum standard deviation value in the catenary from points to be used as a wire geometry model</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.40</Value>
+        <MaximumValue>1.00</MaximumValue>
+        <MinimumValue>0.05</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_MaximumVerticalDistanceBetweenWires</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum vertical distance between wires, for wires without geometry from points.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>18.0</Value>
+        <MaximumValue>50.0</MaximumValue>
+        <MinimumValue>0.5</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_MinimumSafetyGroundDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum value for safety ground distance.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>10.0</Value>
+        <MaximumValue>12.0</MaximumValue>
+        <MinimumValue>6.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_PowerlineVoltage</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Powerline voltage (kv)</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>20;66;132;220;400</ValueList>
+        <Value>400</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_ProcessOnlyEnabledConnections</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled connections</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_ProcessOnlyEnabledWiresGroups</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled wires groups</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireBreakingCoefficient</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire breaking coefficient</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>3.0</Value>
+        <MaximumValue>4.0</MaximumValue>
+        <MinimumValue>2.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireBreakingTension</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire breaking tension (daN)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>8456.0</Value>
+        <MaximumValue>18000.0</MaximumValue>
+        <MinimumValue>500.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireCoefficientLinearThermalExpansion</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire coefficient of linear thermal expansion (ºC-1)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>0.000018900</Value>
+        <MaximumValue>0.000025000</MaximumValue>
+        <MinimumValue>0.000015000</MinimumValue>
+        <PrintPrecision>9</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireDiameter</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire diameter (mm)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>21.8</Value>
+        <MaximumValue>32.0</MaximumValue>
+        <MinimumValue>5.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireElasticModulus</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire elastic modulus (daN/mm2)</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>7553.0</Value>
+        <MaximumValue>9000.0</MaximumValue>
+        <MinimumValue>5000.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireMaximumDistanceFromAxis</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Wire maximum distance from axis, for wires without geometry from points.</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meter</Unit>
+        <Value>8.0</Value>
+        <MaximumValue>20.0</MaximumValue>
+        <MinimumValue>0.5</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireSection</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
         <Type>Double precision number</Type>
@@ -880,8 +1021,8 @@
         <PrintPrecision>1</PrintPrecision>
     </Parameter>
     <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_WireWeight</Code>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_WireWeight</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
         <Type>Double precision number</Type>
@@ -894,8 +1035,8 @@
         <PrintPrecision>3</PrintPrecision>
     </Parameter>
     <Parameter>
-        <Command>Wires computation for maximum sag hypothesis</Command>
-        <Code>WCMSH_dtm_raster_file</Code>
+        <Command>Wires computation for maximum sag hypothesis (old version)</Command>
+        <Code>WCMSHO_dtm_raster_file</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
         <Type>File</Type>

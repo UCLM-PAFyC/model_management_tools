@@ -9,7 +9,7 @@
         <Description>LAZ Geoid heights file. Select from folder geoids_lastools</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>E:\dev\src\python\qgis3\point_cloud_tools\libCppOldOSGeo4W/geoids_lastools/EGM08_REDNAP_25830.laz</Value>
+        <Value>E:\dev\src\python\qgis3\model_management_tools\libCpp/geoids_lastools/EGM08_REDNAP_25830.laz</Value>
     </Parameter>
     <Parameter>
         <Command>las2dem64</Command>
@@ -721,6 +721,17 @@
     </Parameter>
     <Parameter>
         <Command>Powerline ROI KML file</Command>
+        <Code>prk_powerline_definition_input_shapefile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Powerline definition input file shapefile</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>F:/seguridad_rural/Tendidos/Definicion_LAT/RED_LATs_BTN.shp</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Powerline ROI KML file</Command>
         <Code>prk_roi_kml_buffer</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -732,17 +743,6 @@
         <MaximumValue>10000.0</MaximumValue>
         <MinimumValue>20.0</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Powerline ROI KML file</Command>
-        <Code>prk_powerline_definition_input_shapefile</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>File</Type>
-        <Description>Powerline definition input file shapefile</Description>
-        <PrintSize>200</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>F:/seguridad_rural/Tendidos/Definicion_LAT/RED_LATs_BTN.shp</Value>
     </Parameter>
     <Parameter>
         <Command>SolarPark preprocessing</Command>

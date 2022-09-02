@@ -1,6 +1,80 @@
 <!DOCTYPE ParametersManager>
 <ParametersManager version="1.1">
     <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_PanelsShapefile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>Shapefile with panels geometry, same CRS as project.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/solar_park/solar_park_definition/geometria_fran/paneles.shp</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_MaximumPanelsDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum distance between panels</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.1</Value>
+        <MaximumValue>0.5</MaximumValue>
+        <MinimumValue>0.005</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_MaximumPanelDiagonal</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Maximum value of the diagonal of a panel</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.8</Value>
+        <MaximumValue>20.</MaximumValue>
+        <MinimumValue>0.10</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_OutputArrayShapefileName</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Text</Type>
+        <Description>Output array shapefile filename, in panels shapefile path</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>ArraysFromPanels.shp</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSHP_Algorithm</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Algorithm</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>farthest corners;union</ValueList>
+        <Value>farthest corners</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Compute array panels geometry from panels shapefile</Command>
+        <Code>CPGFPSH_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
         <Command>3. Compute corrections: distance, view angle and reflection</Command>
         <Code>CDTC_DsmRasterFile</Code>
         <Enabled>Yes</Enabled>
@@ -9,7 +83,7 @@
         <Description>DSM raster file, same CRS as project and with no data value.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dsm.tif</Value>
+        <Value>C:/uclm/Ejemplo_PozoCanada/VueloPhantom4ProRTK/dsm_combinado.tif</Value>
     </Parameter>
     <Parameter>
         <Command>3. Compute corrections: distance, view angle and reflection</Command>
@@ -191,18 +265,6 @@
     </Parameter>
     <Parameter>
         <Command>1. Compute panels geometry from DSM and DTM</Command>
-        <Code>CPGDSMDTM_CheckPanelsRowsColumnsSize</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Value list</Type>
-        <Description>Check the number of rows and columns of panels compared to size</Description>
-        <PrintSize>10</PrintSize>
-        <Unit>adimensional</Unit>
-        <ValueList>true;false</ValueList>
-        <Value>false</Value>
-    </Parameter>
-    <Parameter>
-        <Command>1. Compute panels geometry from DSM and DTM</Command>
         <Code>CPGDSMDTM_MeanAltitudeTolerance</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -245,6 +307,18 @@
     </Parameter>
     <Parameter>
         <Command>1. Compute panels geometry from DSM and DTM</Command>
+        <Code>CPGDSMDTM_CheckPanelsRowsColumnsSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Check the number of rows and columns of panels compared to size</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
+    </Parameter>
+    <Parameter>
+        <Command>1. Compute panels geometry from DSM and DTM</Command>
         <Code>CPGDSMDTM_MultiProcess</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -264,7 +338,7 @@
         <Description>Output path for report files</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/ejemplo_coreses_REDEN/outputs_pf</Value>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/outputs</Value>
     </Parameter>
     <Parameter>
         <Command>1. Compute panels geometry from DSM and DTM</Command>
@@ -301,7 +375,7 @@
         <Description>DSM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dsm.tif</Value>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/vuelo_rgb/dsm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>1. Compute panels geometry from DSM and DTM</Command>
@@ -312,81 +386,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dtm.tif</Value>
-    </Parameter>
-    <Parameter>
-        <Command>Compute array panels geometry from panels shapefile</Command>
-        <Code>CPGFPSHP_Algorithm</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Value list</Type>
-        <Description>Algorithm</Description>
-        <PrintSize>10</PrintSize>
-        <Unit>adimensional</Unit>
-        <ValueList>farthest corners;union</ValueList>
-        <Value>farthest corners</Value>
-    </Parameter>
-    <Parameter>
-        <Command>Compute array panels geometry from panels shapefile</Command>
-        <Code>CPGFPSHP_MaximumPanelDiagonal</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Maximum value of the diagonal of a panel</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>1.800</Value>
-        <MaximumValue>20.000</MaximumValue>
-        <MinimumValue>0.100</MinimumValue>
-        <PrintPrecision>3</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Compute array panels geometry from panels shapefile</Command>
-        <Code>CPGFPSHP_MaximumPanelsDistance</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Maximum distance between panels</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>0.100</Value>
-        <MaximumValue>0.500</MaximumValue>
-        <MinimumValue>0.005</MinimumValue>
-        <PrintPrecision>3</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Compute array panels geometry from panels shapefile</Command>
-        <Code>CPGFPSHP_OutputArrayShapefileName</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Text</Type>
-        <Description>Output array shapefile filename, in panels shapefile path</Description>
-        <PrintSize>10</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>ArraysFromPanels.shp</Value>
-    </Parameter>
-    <Parameter>
-        <Command>Compute array panels geometry from panels shapefile</Command>
-        <Code>CPGFPSHP_PanelsShapefile</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>File</Type>
-        <Description>Shapefile with panels geometry, same CRS as project.</Description>
-        <PrintSize>200</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>C:/uclm/ejemplo_coreses_REDEN/solar_park/solar_park_definition/geometria_fran/paneles.shp</Value>
-    </Parameter>
-    <Parameter>
-        <Command>Compute array panels geometry from panels shapefile</Command>
-        <Code>CPGFPSH_MultiProcess</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Value list</Type>
-        <Description>Use multi process</Description>
-        <PrintSize>10</PrintSize>
-        <Unit>adimensional</Unit>
-        <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>C:/uclm/ejemplo_coreses_REDEN/vuelo_rgb/dtm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>2. Get images footprints from arrays panels</Command>
@@ -397,7 +397,7 @@
         <Description>DSM raster file, same CRS as project and with no data value.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/ejemplo_coreses_REDEN/VueloPhantom4ProRTK/dsm.tif</Value>
+        <Value>C:/uclm/Ejemplo_PozoCanada/VueloPhantom4ProRTK/dsm_combinado.tif</Value>
     </Parameter>
     <Parameter>
         <Command>2. Get images footprints from arrays panels</Command>
@@ -437,7 +437,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>true;false</ValueList>
-        <Value>true</Value>
+        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>2. Get images footprints from arrays panels</Command>
@@ -669,7 +669,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>File;Value</ValueList>
-        <Value>Value</Value>
+        <Value>File</Value>
     </Parameter>
     <Parameter>
         <Command>5. Hot spots detection</Command>
@@ -702,7 +702,7 @@
         <Description>Value of Sun irradiance, W/m2, for input data format value and default value. 0 for ignore normalization</Description>
         <PrintSize>20</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>900.000000</Value>
+        <Value>600.000000</Value>
         <MaximumValue>10000.000000</MaximumValue>
         <MinimumValue>0.000000</MinimumValue>
         <PrintPrecision>6</PrintPrecision>
@@ -728,7 +728,7 @@
         <Description>Output path for report files</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_PozoCanada/SolarPark/reports_20220211</Value>
+        <Value>H:\Eiffage\SolarPark\PozoCanada\model_management\output</Value>
     </Parameter>
     <Parameter>
         <Command>6. Report Hot spots</Command>
@@ -776,7 +776,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>File;Value</ValueList>
-        <Value>Value</Value>
+        <Value>File</Value>
     </Parameter>
     <Parameter>
         <Command>6. Report Hot spots</Command>
@@ -787,7 +787,7 @@
         <Description>Sun irradiance CSV file: date(yyyy:MM:dd);time(hh:mm:ss);panel;value</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_PozoCanada/data/SunIrradiance.csv</Value>
+        <Value>H:/Eiffage/SolarPark/PozoCanada/data/SunIrradiance.csv</Value>
     </Parameter>
     <Parameter>
         <Command>6. Report Hot spots</Command>
@@ -809,7 +809,7 @@
         <Description>Value of Sun irradiance, W/m2, for input data format value and default value. 0 for ignore normalization</Description>
         <PrintSize>20</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>900.000000</Value>
+        <Value>600.000000</Value>
         <MaximumValue>10000.000000</MaximumValue>
         <MinimumValue>0.000000</MinimumValue>
         <PrintPrecision>6</PrintPrecision>
@@ -861,7 +861,7 @@
         <Description>Atmosphere relative humidity (%), for input data format value and default value</Description>
         <PrintSize>20</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>30.0</Value>
+        <Value>22.3</Value>
         <MaximumValue>100.0</MaximumValue>
         <MinimumValue>0.0</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
@@ -875,9 +875,23 @@
         <Description>Atmosphere temperature (ºC), for input data format value and default value</Description>
         <PrintSize>20</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>28.0</Value>
+        <Value>27.3</Value>
         <MaximumValue>50.0</MaximumValue>
         <MinimumValue>0.0</MinimumValue>
+        <PrintPrecision>1</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>4. Temperature statistics computation</Command>
+        <Code>TSC_ReflectedTemperature</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Reflected temperature (ºC), for clear sky usually -50 to -60</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>-55.0</Value>
+        <MaximumValue>120.0</MaximumValue>
+        <MinimumValue>-120.</MinimumValue>
         <PrintPrecision>1</PrintPrecision>
     </Parameter>
     <Parameter>
@@ -890,7 +904,7 @@
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
         <ValueList>File;Value</ValueList>
-        <Value>Value</Value>
+        <Value>File</Value>
     </Parameter>
     <Parameter>
         <Command>4. Temperature statistics computation</Command>
@@ -1077,20 +1091,6 @@
     </Parameter>
     <Parameter>
         <Command>4. Temperature statistics computation</Command>
-        <Code>TSC_ReflectedTemperature</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Reflected temperature (ºC), for clear sky usually -50 to -60</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>adimensional</Unit>
-        <Value>-55.0</Value>
-        <MaximumValue>120.0</MaximumValue>
-        <MinimumValue>-120.0</MinimumValue>
-        <PrintPrecision>1</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>4. Temperature statistics computation</Command>
         <Code>TSC_TemperatureEquationEmissivityAngleOfView</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -1100,18 +1100,6 @@
         <Unit>adimensional</Unit>
         <ValueList>1.0*x;0.8979+0.00060*x-1.3285e-05*x^2+1.199e-06*x^3-2.11e-08*x^4</ValueList>
         <Value>0.8979+0.00060*x-1.3285e-05*x^2+1.199e-06*x^3-2.11e-08*x^4</Value>
-    </Parameter>
-    <Parameter>
-        <Command>Update panels geometry from DSM and DTM</Command>
-        <Code>UPGDSMDTM_CheckPanelsRowsColumnsSize</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Value list</Type>
-        <Description>Check the number of rows and columns of panels compared to size</Description>
-        <PrintSize>10</PrintSize>
-        <Unit>adimensional</Unit>
-        <ValueList>true;false</ValueList>
-        <Value>false</Value>
     </Parameter>
     <Parameter>
         <Command>Update panels geometry from DSM and DTM</Command>
@@ -1211,5 +1199,17 @@
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
         <Value>C:/uclm/Ejemplo_PozoCanada/VueloPhantom4ProRTK/dtm_50cm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Update panels geometry from DSM and DTM</Command>
+        <Code>UPGDSMDTM_CheckPanelsRowsColumnsSize</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Check the number of rows and columns of panels compared to size</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
     </Parameter>
 </ParametersManager>

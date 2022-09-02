@@ -9,7 +9,7 @@
         <Description>Digital terrain model in raster format for estimate ground altitude</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/data/20220426_Tarazona_vid_hElip_dtm_50cm.tif</Value>
+        <Value>D:/QGisPAFyCTooolsProjects/FuenteAlamo/data/dtm_50cm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Compute Crops Bounding Box</Command>
@@ -34,7 +34,7 @@
         <Description>Distance from vine to bounding edge in orthogonal to line direction</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>0.50</Value>
+        <Value>1.50</Value>
         <MaximumValue>4.00</MaximumValue>
         <MinimumValue>0.05</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
@@ -74,7 +74,7 @@
         <Description>Shapefile of crops, point type, with id unique integer field and line integer field</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/data/vines_centroids.shp</Value>
+        <Value>D:/QGisPAFyCTooolsProjects/FuenteAlamo_NW/data/cepas_amaro_dhl.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Create Crops Management Project</Command>
@@ -88,48 +88,6 @@
         <Value>25830</Value>
         <MaximumValue>1000000</MaximumValue>
         <MinimumValue>-1</MinimumValue>
-    </Parameter>
-    <Parameter>
-        <Command>Create Crops Shapefile</Command>
-        <Code>CCSHP_AzimuthToleranceInLine</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Degrees of azimuth tolerance in line</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>10.00</Value>
-        <MaximumValue>25.00</MaximumValue>
-        <MinimumValue>0.50</MinimumValue>
-        <PrintPrecision>2</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Create Crops Shapefile</Command>
-        <Code>CCSHP_LineLengtheningToJoinLines</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Line lengthening join lines</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>5.00</Value>
-        <MaximumValue>50.00</MaximumValue>
-        <MinimumValue>3.00</MinimumValue>
-        <PrintPrecision>2</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Create Crops Shapefile</Command>
-        <Code>CCSHP_LineWidthToJoinLines</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Line width to join lines</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>1.50</Value>
-        <MaximumValue>2.00</MaximumValue>
-        <MinimumValue>0.50</MinimumValue>
-        <PrintPrecision>2</PrintPrecision>
     </Parameter>
     <Parameter>
         <Command>Create Crops Shapefile</Command>
@@ -161,6 +119,34 @@
     </Parameter>
     <Parameter>
         <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_LineWidthToJoinLines</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Line width to join lines</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.5</Value>
+        <MaximumValue>2.00</MaximumValue>
+        <MinimumValue>0.5</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_LineLengtheningToJoinLines</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Line lengthening join lines</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>5.00</Value>
+        <MaximumValue>50.00</MaximumValue>
+        <MinimumValue>3.0</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>line lengthening
+    <Parameter>
+        <Command>Create Crops Shapefile</Command>
         <Code>CCSHP_MinimumPlantsDistanceInLine</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -171,6 +157,20 @@
         <Value>1.00</Value>
         <MaximumValue>4.00</MaximumValue>
         <MinimumValue>0.20</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_AzimuthToleranceInLine</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Degrees of azimuth tolerance in line</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>10.00</Value>
+        <MaximumValue>25.00</MaximumValue>
+        <MinimumValue>0.5</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
     </Parameter>
     <Parameter>
@@ -251,7 +251,7 @@
         <Description>Shapefile to import</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/data/vines_centroids.shp</Value>
+        <Value>D:/Proyectos_QGis_PAFyCTools/FuenteAlamo/data/GeolocalizacionCepas20200306_dhl.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Import shapefile</Command>
@@ -292,6 +292,17 @@
     </Parameter>
     <Parameter>
         <Command>Nested Grid Data Cubes Processes</Command>
+        <Code>NGDCP_DockerExecutableFilePath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Docker executable file path</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>C:/Program Files/Docker/Docker/resources/bin</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Nested Grid Data Cubes Processes</Command>
         <Code>NGDCP_DockerSharedFolderBasePath</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -299,7 +310,7 @@
         <Description>Docker shared folder base path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>/mnt/hgfs/GDALCubesProjects</Value>
+        <Value>/home</Value>
     </Parameter>
     <Parameter>
         <Command>Nested Grid Data Cubes Processes</Command>
@@ -318,7 +329,7 @@
         <Enabled>Yes</Enabled>
         <Tag></Tag>
         <Type>Path</Type>
-        <Description>GdalCubes formaf files path of R installation</Description>
+        <Description>GdalCubes format files path of R installation</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
         <Value>C:/Users/dhernand/Documents/R/win-library/4.0/gdalcubes/formats</Value>
@@ -332,7 +343,7 @@
         <Description>Output path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vv/output</Value>
+        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vh/output_20220503_export_amal</Value>
     </Parameter>
     <Parameter>
         <Command>Nested Grid Data Cubes Processes</Command>
@@ -367,7 +378,7 @@
         <Description>Temp path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vv/temp</Value>
+        <Value>D:/GDALCubesProjects/AmalTunez/gdalcubes/s1_vh/temp_20220503_export_amal</Value>
     </Parameter>
     <Parameter>
         <Command>Nested Grid Data Cubes Processes</Command>
