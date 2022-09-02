@@ -1,0 +1,41 @@
+Determination of hazard areas report
+- Project file .........................: F:/seguridad_rural/Tendidos/pwl_tendidos.sqlite
+- Electric pylons connection ...........: EP_48_EP_49
+- Number of wire groups ................: 4
+- Processing parameters:
+  - Process only enabled ...............: True
+  - Minimum area size ..................: 2.000
+  - Buffer area size ...................: 50.000
+  - Connection distance ................: 1
+  - Maximum number of connected cells ..:100
+  - DTM raster file ....................: F:/seguridad_rural/Tendidos/data/primera_cobertura_dtm.tif
+  - Wind deviation using maximum sag ...: False
+  - Maximum wind deviation (no if sag) .: 2.000
+  - Minimum distance by fall ...........: 1.000
+  - Minimum free height ................: 6.000
+  - Minimum slope distance .............: 5.000
+  - Point classes to ignore ............: 7,8,9,10,11,12
+  - Catenary threshold .................: 0.400
+- Get Object Points time ......: 3 milliseconds
+- Get Points geometry time ....: 506 milliseconds
+- Region of interest ..........: POLYGON((569325.6948 4282785.2876,569676.1734 4282838.5336,569691.1934 4282739.6680,569340.7148 4282686.4220,569325.6948 4282785.2876))
+- Number of points in region ..: 19074
+- Number of points to ignore: 
+  - First electric pylon ......: 112
+  - Second electric pylon .....: 67
+  - Electric pylons connection : 534
+  - Wires groups ..............: 0
+- Number of grids .............: 5838
+- Get height grids time .......: 14 milliseconds
+- Get values by grid time .....: 16 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 4 milliseconds
+- Hazard areas maximum sag hypothesis groups:  6
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+        12                 303      12      5.18      3.05      7.00      1.23       3      2.54      2.15      2.85      0.36       3      4.26      3.50      4.85      0.69  POLYGON ((569501 4282746,569499 4282746,569497 4282746,569497 4282748,569495 4282748,569495 4282750,569497 4282750,569497 4282752,569499 4282752,569501 4282752,569501 4282754,569503 4282754,569505 4282754,569505 4282752,569503 4282752,569503 4282750,569503 4282748,569503 4282746,569501 4282746))
+        12                 303      12      4.58      1.31      6.60      1.57       6      1.77      1.00      3.00      0.85       1      1.29      ----      ----      ----  POLYGON ((569517 4282752,569517 4282754,569519 4282754,569519 4282752,569521 4282752,569521 4282754,569523 4282754,569523 4282752,569523 4282750,569521 4282750,569519 4282750,569517 4282750,569515 4282750,569515 4282748,569513 4282748,569511 4282748,569511 4282750,569511 4282752,569513 4282752,569513 4282754,569513 4282756,569515 4282756,569515 4282754,569515 4282752,569517 4282752))
+         1                 303       1      6.73      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((569533 4282756,569535 4282756,569535 4282754,569533 4282754,569533 4282756))
+         1                 302       1      6.86      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((569533 4282774,569535 4282774,569535 4282772,569533 4282772,569533 4282774))
+         1                 302       1      6.85      ----      ----      ----       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((569537 4282774,569539 4282774,569539 4282772,569537 4282772,569537 4282774))
+         6                 303       6      6.37      5.86      6.85      0.34       0      ----      ----      ----      ----       0      ----      ----      ----      ----  MULTIPOLYGON (((569557 4282758,569557 4282756,569555 4282756,569555 4282758,569557 4282758)),((569557 4282758,569557 4282760,569559 4282760,569559 4282762,569561 4282762,569563 4282762,569563 4282760,569561 4282760,569561 4282758,569559 4282758,569557 4282758)),((569563 4282764,569565 4282764,569565 4282762,569563 4282762,569563 4282764)))

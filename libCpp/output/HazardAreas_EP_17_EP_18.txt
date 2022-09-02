@@ -1,0 +1,36 @@
+Determination of hazard areas report
+- Project file .........................: F:/seguridad_rural/Tendidos/pwl_tendidos.sqlite
+- Electric pylons connection ...........: EP_17_EP_18
+- Number of wire groups ................: 4
+- Processing parameters:
+  - Process only enabled ...............: True
+  - Minimum area size ..................: 2.000
+  - Buffer area size ...................: 50.000
+  - Connection distance ................: 1
+  - Maximum number of connected cells ..:100
+  - DTM raster file ....................: F:/seguridad_rural/Tendidos/data/primera_cobertura_dtm.tif
+  - Wind deviation using maximum sag ...: False
+  - Maximum wind deviation (no if sag) .: 2.000
+  - Minimum distance by fall ...........: 1.000
+  - Minimum free height ................: 6.000
+  - Minimum slope distance .............: 5.000
+  - Point classes to ignore ............: 7,8,9,10,11,12
+  - Catenary threshold .................: 0.400
+- Get Object Points time ......: 0 milliseconds
+- Get Points geometry time ....: 359 milliseconds
+- Region of interest ..........: POLYGON((562267.4730 4286256.3843,562370.9596 4285943.2529,562276.0106 4285911.8733,562172.5240 4286225.0047,562267.4730 4286256.3843))
+- Number of points in region ..: 23223
+- Number of points to ignore: 
+  - First electric pylon ......: 0
+  - Second electric pylon .....: 24
+  - Electric pylons connection : 40
+  - Wires groups ..............: 0
+- Number of grids .............: 17232
+- Get height grids time .......: 16 milliseconds
+- Get values by grid time .....: 12 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 0 milliseconds
+- Hazard areas maximum sag hypothesis groups:  1
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry
+         2                 179       2      6.70      6.48      6.92      0.31       0      ----      ----      ----      ----       0      ----      ----      ----      ----  POLYGON ((562244 4286135,562246 4286135,562246 4286133,562244 4286133,562242 4286133,562242 4286135,562244 4286135))

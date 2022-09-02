@@ -1,0 +1,80 @@
+Wires computation for maximum sag hypothesis
+- Project file ...................................: F:/seguridad_rural/Tendidos/pwl_tendidos.sqlite
+- Electric pylons connection .....................: EP_12_EP_13
+- Number of wire groups to compute ...............: 4
+- Processing parameters:
+  - Process only enabled connections .............: True
+  - Process only enabled wires groups ............: True
+  - Powerline voltage (kv) .......................: 132.0
+  - Wire type ....................................: 242-AL1/39-ST1A
+  - Wire section (mm2) ...........................: 281.1
+  - Wire elastic modulus (daN/mm2) ...............: 7500.0
+  - Wire coef linear thermal expansion (ºC-1) ....: 0.000018900
+  - Wire weight (daN/m) ..........................: 0.977
+  - Wire diameter (mm) ...........................: 21.8
+  - Wire breaking coefficient (daN) ..............: 8450.0
+  - Wire maximum distance from axis (m) ..........: 8.0
+  - Maximum vertical distance between wires (m) ..: 18.0
+  - Minimum safety ground distance (m) ...........: 10.0
+  - Safety ground distance (m) ...................: 10.0
+  - Digital terrain model file name ..............: F:/seguridad_rural/Tendidos/data/primera_cobertura_dtm.tif
+- Region of interest .............................: POLYGON((560829.6969 4286208.2476,561012.5068 4286142.0691,561007.0606 4286127.0245,560824.2507 4286193.2030,560829.6969 4286208.2476))
+- Minimum elevation from dtm .....................: 1121.074
+- Maximum elevation from dtm .....................: 1130.167
+- Maximum Sag ....................................: 5.103
+- Catenary computed from Sag: height(x)=c*cosh((x-x_min)/c)+bias, x is the 2d distance to first point;
+  - First point ..................................: ( 560826.9738, 4286200.7253, 1121.3079)
+  - Last point ...................................: ( 561009.7837, 4286134.5468, 1126.1157)
+  - Length (2d,m) ................................: 194.420
+  - Delta H (m) ..................................: 4.808
+  - Length (3d,m) ................................: 194.479
+  - Azimuth (deg) ................................: 109.900620722809
+    Iter      cSag   Error_sag
+       1    0.8543      4.2485
+       2    1.2081      3.8946
+       3    1.4797      3.6231
+       4    1.7086      3.3941
+       5    1.9103      3.1924
+       6    2.0927      3.0100
+       7    2.2604      2.8423
+       8    2.4165      2.6862
+       9    2.5632      2.5396
+      10    2.7019      2.4009
+      11    2.8338      2.2690
+      12    2.9598      2.1429
+      13    3.0808      2.0220
+      14    3.1971      1.9056
+      15    3.3094      1.7934
+      16    3.4180      1.6848
+      17    3.5232      1.5795
+      18    3.6254      1.4773
+      19    3.7249      1.3779
+      20    3.8217      1.2811
+      21    3.9161      1.1866
+      22    4.0084      1.0944
+      23    4.0985      1.0042
+      24    4.1868      0.9160
+      25    4.2732      0.8296
+      26    4.3579      0.7449
+      27    4.4410      0.6618
+      28    4.5225      0.5802
+      29    4.6027      0.5001
+      30    4.6814      0.4213
+      31    4.7589      0.3438
+      32    4.8351      0.2676
+      33    4.9102      0.1925
+      34    4.9841      0.1186
+      35    5.0570      0.0458
+  - Parameter c ..................................: 935.453132366504860
+  - Parameter x_min ..............................: 74.121012907602477
+  - Parameter bias ...............................: 182.916738814292671
+  - Parameter s ..................................: 194.8292
+  - Parameter sag ................................: 5.0570
+  - Parameter SagDistance ........................: 97.2500
+  - Parameter MaxError ...........................: 0.0000
+  - Parameter Std ................................: 0.0000
+- Catenary arc length ............................: 194.829
+- Theoretical sag ................................: 5.103
+- Catenary maximum sag ...........................: 5.057
+- Catenary maximum sag arc length ................: 97.250
+- Pylons minimum height ..........................: 21.129
