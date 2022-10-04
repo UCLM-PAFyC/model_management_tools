@@ -91,6 +91,48 @@
     </Parameter>
     <Parameter>
         <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_AzimuthToleranceInLine</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Degrees of azimuth tolerance in line</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>10.00</Value>
+        <MaximumValue>25.00</MaximumValue>
+        <MinimumValue>0.50</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_LineLengtheningToJoinLines</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Line lengthening join lines</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>5.00</Value>
+        <MaximumValue>50.00</MaximumValue>
+        <MinimumValue>3.00</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_LineWidthToJoinLines</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Line width to join lines</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.50</Value>
+        <MaximumValue>2.00</MaximumValue>
+        <MinimumValue>0.50</MinimumValue>
+        <PrintPrecision>2</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Create Crops Shapefile</Command>
         <Code>CCSHP_MaximumPlantsDistanceInLine</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -119,34 +161,6 @@
     </Parameter>
     <Parameter>
         <Command>Create Crops Shapefile</Command>
-        <Code>CCSHP_LineWidthToJoinLines</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Line width to join lines</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>1.5</Value>
-        <MaximumValue>2.00</MaximumValue>
-        <MinimumValue>0.5</MinimumValue>
-        <PrintPrecision>2</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Create Crops Shapefile</Command>
-        <Code>CCSHP_LineLengtheningToJoinLines</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Line lengthening join lines</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>5.00</Value>
-        <MaximumValue>50.00</MaximumValue>
-        <MinimumValue>3.0</MinimumValue>
-        <PrintPrecision>2</PrintPrecision>
-    </Parameter>line lengthening
-    <Parameter>
-        <Command>Create Crops Shapefile</Command>
         <Code>CCSHP_MinimumPlantsDistanceInLine</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -157,20 +171,6 @@
         <Value>1.00</Value>
         <MaximumValue>4.00</MaximumValue>
         <MinimumValue>0.20</MinimumValue>
-        <PrintPrecision>2</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Create Crops Shapefile</Command>
-        <Code>CCSHP_AzimuthToleranceInLine</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Degrees of azimuth tolerance in line</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>10.00</Value>
-        <MaximumValue>25.00</MaximumValue>
-        <MinimumValue>0.5</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
     </Parameter>
     <Parameter>
@@ -241,6 +241,162 @@
         <Value>-1</Value>
         <MaximumValue>1000000</MaximumValue>
         <MinimumValue>-1</MinimumValue>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_DsmRasterFile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>File</Type>
+        <Description>DSM raster file, same CRS as project and with no data value.</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/data/20220426_Tarazona_vid_hElip_dtm_50cm.tif</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_ImagesFootprintBufferDistance</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Images footprint buffer distance to check points within images</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.000</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_LowerCropHeight</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Lower crop height</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>-0.300</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>-0.500</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_MinimumSideSmallestObjectInImage</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum side of the smallest object in image</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.400</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_MultiProcess</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use multi process</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>false</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_OutputPath</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Path</Type>
+        <Description>Output path</Description>
+        <PrintSize>200</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/output</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_ProcessOnlyEnabledCrops</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled crops</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_ProcessOnlyEnabledImages</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Process only enabled images</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_TopCropHeight</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Top crop height</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>1.000</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_SunAzimuth</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Sun azimuth (DEG), no date/time in images</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>sexagesimal degrees (DEG)</Unit>
+        <Value>121.000</Value>
+        <MaximumValue>359.000</MaximumValue>
+        <MinimumValue>0.00</MinimumValue>
+        <PrintPrecision>8</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_SunElevation</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Sun elevation (DEG), no date/time in images</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>sexagesimal degrees (DEG)</Unit>
+        <Value>39.5</Value>
+        <MaximumValue>89.0</MaximumValue>
+        <MinimumValue>0.00</MinimumValue>
+        <PrintPrecision>8</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_TrunkArmsRatioValidChange</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Valid change in ratio trunk and arms length, in object and image space</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>adimensional</Unit>
+        <Value>0.30</Value>
+        <MaximumValue>1.0</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
     </Parameter>
     <Parameter>
         <Command>Import shapefile</Command>
