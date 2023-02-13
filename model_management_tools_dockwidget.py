@@ -1932,7 +1932,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         strDir = QFileDialog.getExistingDirectory(self, "Select directory", self.projectManagerOutputPath,
                                                   QFileDialog.ShowDirsOnly | QFileDialog.DontResolveSymlinks)
         if strDir:
-            ret = self.iPyProject.mmtSetProjectManagerOutputPath(self.strDir)
+            ret = self.iPyProject.mmtSetProjectManagerOutputPath(strDir)
             if ret[0] == "False":
                 msgBox = QMessageBox(self)
                 msgBox.setIcon(QMessageBox.Information)
@@ -1952,7 +1952,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         strDir = QFileDialog.getExistingDirectory(self,"Select directory", self.projectManagerTemporalPath,
                                                   QFileDialog.ShowDirsOnly | QFileDialog.DontResolveSymlinks)
         if strDir:
-            ret = self.iPyProject.mmtSetProjectManagerTemporalPath(self.strDir)
+            ret = self.iPyProject.mmtSetProjectManagerTemporalPath(strDir)
             if ret[0] == "False":
                 msgBox = QMessageBox(self)
                 msgBox.setIcon(QMessageBox.Information)
