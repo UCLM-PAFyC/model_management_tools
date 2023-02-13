@@ -244,6 +244,20 @@
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
+        <Code>GIFC_ArmsTrunkImagesMinimumAngle</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum angle (DEG) in images between trunk and arms</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>sexagesimal degrees (DEG)</Unit>
+        <Value>45.00000000</Value>
+        <MaximumValue>80.00000000</MaximumValue>
+        <MinimumValue>10.00000000</MinimumValue>
+        <PrintPrecision>8</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
         <Code>GIFC_DsmRasterFile</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -316,7 +330,7 @@
         <Description>Output path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/output</Value>
+        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/ouput_20221118</Value>
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
@@ -344,20 +358,6 @@
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
-        <Code>GIFC_TopCropHeight</Code>
-        <Enabled>Yes</Enabled>
-        <Tag></Tag>
-        <Type>Double precision number</Type>
-        <Description>Top crop height</Description>
-        <PrintSize>20</PrintSize>
-        <Unit>meters</Unit>
-        <Value>1.000</Value>
-        <MaximumValue>200.000</MaximumValue>
-        <MinimumValue>0.010</MinimumValue>
-        <PrintPrecision>3</PrintPrecision>
-    </Parameter>
-    <Parameter>
-        <Command>Get images footprints from crops</Command>
         <Code>GIFC_SunAzimuth</Code>
         <Enabled>Yes</Enabled>
         <Tag></Tag>
@@ -365,9 +365,9 @@
         <Description>Sun azimuth (DEG), no date/time in images</Description>
         <PrintSize>20</PrintSize>
         <Unit>sexagesimal degrees (DEG)</Unit>
-        <Value>121.000</Value>
-        <MaximumValue>359.000</MaximumValue>
-        <MinimumValue>0.00</MinimumValue>
+        <Value>121.00000000</Value>
+        <MaximumValue>359.00000000</MaximumValue>
+        <MinimumValue>0.00000000</MinimumValue>
         <PrintPrecision>8</PrintPrecision>
     </Parameter>
     <Parameter>
@@ -379,10 +379,24 @@
         <Description>Sun elevation (DEG), no date/time in images</Description>
         <PrintSize>20</PrintSize>
         <Unit>sexagesimal degrees (DEG)</Unit>
-        <Value>39.5</Value>
-        <MaximumValue>89.0</MaximumValue>
-        <MinimumValue>0.00</MinimumValue>
+        <Value>39.50000000</Value>
+        <MaximumValue>89.00000000</MaximumValue>
+        <MinimumValue>0.00000000</MinimumValue>
         <PrintPrecision>8</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_TopCropHeight</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Top crop height</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>meters</Unit>
+        <Value>0.900</Value>
+        <MaximumValue>200.000</MaximumValue>
+        <MinimumValue>0.010</MinimumValue>
+        <PrintPrecision>3</PrintPrecision>
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
@@ -393,8 +407,8 @@
         <Description>Valid change in ratio trunk and arms length, in object and image space</Description>
         <PrintSize>20</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>0.30</Value>
-        <MaximumValue>1.0</MaximumValue>
+        <Value>0.200</Value>
+        <MaximumValue>1.000</MaximumValue>
         <MinimumValue>0.010</MinimumValue>
         <PrintPrecision>3</PrintPrecision>
     </Parameter>

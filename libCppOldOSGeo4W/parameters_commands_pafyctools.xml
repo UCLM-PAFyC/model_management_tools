@@ -399,6 +399,20 @@
         <PrintPrecision>3</PrintPrecision>
     </Parameter>
     <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_ArmsTrunkImagesMinimumAngle</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Double precision number</Type>
+        <Description>Minimum angle (DEG) in images between trunk and arms</Description>
+        <PrintSize>20</PrintSize>
+        <Unit>sexagesimal degrees (DEG)</Unit>
+        <Value>45.000</Value>
+        <MaximumValue>80.000</MaximumValue>
+        <MinimumValue>10.00</MinimumValue>
+        <PrintPrecision>8</PrintPrecision>
+    </Parameter>
+    <Parameter>
         <Command>Import shapefile</Command>
         <Code>IMP_SHP_Shapefile</Code>
         <Enabled>Yes</Enabled>

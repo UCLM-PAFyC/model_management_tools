@@ -426,7 +426,7 @@
         <Description>Output path for point cloud files, empty for use the same of original files</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value></Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/export</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -511,7 +511,7 @@
         <Description>Suffix for output files</Description>
         <PrintSize>10</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>_updated</Value>
+        <Value>_heights</Value>
     </Parameter>
     <Parameter>
         <Command>Export results to point cloud files</Command>
@@ -600,7 +600,7 @@
         <Description>DTM raster file, same CRS as project.</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>C:/uclm/Ejemplo_Cuenca/RPAS_LIDAR/Preprocesamiento/cuenca_dtm.tif</Value>
+        <Value>C:/uclm/Ejemplo_Zamora_1/RPAS_LIDAR/Preprocesamiento/zamora_dtm_rpas_lidar.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Extract wires groups from connections</Command>

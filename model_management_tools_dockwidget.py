@@ -606,9 +606,16 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
             msgBox.exec_()
             return
         self.getPointCloudSpatialiteConnections()
+        normalized_paths = []
+        for value in ret:
+            if not value == "True":
+                normalized_paths.append(os.path.normpath(value))
         for pointCloudConnection in self.pointCloudConnections.keys():
             path = self.pointCloudConnections[pointCloudConnection]
+            normalized_path = os.path.normpath(path)
             if path in ret:
+                self.pointCloudConnectionsInProject[pointCloudConnection] = path
+            elif normalized_path in normalized_paths:
                 self.pointCloudConnectionsInProject[pointCloudConnection] = path
         self.pointCloudsComboBox.clear()
         self.pointCloudsComboBox.addItem(MMTDefinitions.CONST_NO_COMBO_SELECT)
@@ -1925,7 +1932,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         strDir = QFileDialog.getExistingDirectory(self, "Select directory", self.projectManagerOutputPath,
                                                   QFileDialog.ShowDirsOnly | QFileDialog.DontResolveSymlinks)
         if strDir:
-            ret = self.iPyProject.mmtSetProjectManagerOutputPath(self.projectManagerOutputPath)
+            ret = self.iPyProject.mmtSetProjectManagerOutputPath(self.strDir)
             if ret[0] == "False":
                 msgBox = QMessageBox(self)
                 msgBox.setIcon(QMessageBox.Information)
@@ -1945,7 +1952,7 @@ class ModelManagementToolsDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
         strDir = QFileDialog.getExistingDirectory(self,"Select directory", self.projectManagerTemporalPath,
                                                   QFileDialog.ShowDirsOnly | QFileDialog.DontResolveSymlinks)
         if strDir:
-            ret = self.iPyProject.mmtSetProjectManagerTemporalPath(self.projectManagerTemporalPath)
+            ret = self.iPyProject.mmtSetProjectManagerTemporalPath(self.strDir)
             if ret[0] == "False":
                 msgBox = QMessageBox(self)
                 msgBox.setIcon(QMessageBox.Information)
