@@ -243,6 +243,18 @@
         <MinimumValue>-1</MinimumValue>
     </Parameter>
     <Parameter>
+        <Command>Create Crops Shapefile</Command>
+        <Code>CCSHP_UseOnlyTrunkContoursShapefile</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Use only plants trunk contours shapefile, and ignore shapefile of plants</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
+    </Parameter>
+    <Parameter>
         <Command>Get images footprints from crops</Command>
         <Code>GIFC_ArmsTrunkImagesMinimumAngle</Code>
         <Enabled>Yes</Enabled>
@@ -255,6 +267,18 @@
         <MaximumValue>80.00000000</MaximumValue>
         <MinimumValue>10.00000000</MinimumValue>
         <PrintPrecision>8</PrintPrecision>
+    </Parameter>
+    <Parameter>
+        <Command>Get images footprints from crops</Command>
+        <Code>GIFC_ComputeVolume</Code>
+        <Enabled>Yes</Enabled>
+        <Tag></Tag>
+        <Type>Value list</Type>
+        <Description>Compute volume</Description>
+        <PrintSize>10</PrintSize>
+        <Unit>adimensional</Unit>
+        <ValueList>true;false</ValueList>
+        <Value>true</Value>
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
@@ -330,7 +354,7 @@
         <Description>Output path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/ouput_20221118</Value>
+        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/output_20250524</Value>
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
