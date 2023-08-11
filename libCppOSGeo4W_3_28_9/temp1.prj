@@ -1,0 +1,10 @@
+Model Database Management Project
+- Number of processes ......................................# 1
+- Process (CREATE_DB,ADD_ROI,...) ..........................# ADD_OPL
+  - Database file name .....................................# "F:/seguridad_rural/Tendidos/pwl_tendidos.sqlite"
+  - Name (None, empty and no field will be shapefile name)..# 
+  - Overhead Power Line shapefile ..........................# "F:/seguridad_rural/Tendidos/Definicion_LAT/RED_LATs.shp"
+    Field name (case sensitive, None for ignore ) ..........# None
+  - Minimum separation between Electric Pylots (m) .........# 20.0
+  - Electric Pylots base radius (m) ........................# 7.5
+  - Electric Pylots height (m) .............................# 40.0

@@ -1,0 +1,35 @@
+Determination of hazard areas report
+- Project file .........................: F:/seguridad_rural/Tendidos/pwl_tendidos.sqlite
+- Electric pylons connection ...........: EP_7_EP_8
+- Number of wire groups ................: 4
+- Processing parameters:
+  - Process only enabled ...............: True
+  - Minimum area size ..................: 2.000
+  - Buffer area size ...................: 50.000
+  - Connection distance ................: 1
+  - Maximum number of connected cells ..:100
+  - DTM raster file ....................: F:/seguridad_rural/Tendidos/data/primera_cobertura_dtm.tif
+  - Wind deviation using maximum sag ...: False
+  - Maximum wind deviation (no if sag) .: 2.000
+  - Minimum distance by fall ...........: 1.000
+  - Minimum free height ................: 6.000
+  - Minimum slope distance .............: 5.000
+  - Point classes to ignore ............: 7,8,9,10,11,12
+  - Catenary threshold .................: 0.400
+- Get Object Points time ......: 1 milliseconds
+- Get Points geometry time ....: 119 milliseconds
+- Region of interest ..........: POLYGON((559636.5791 4286551.2914,559871.6818 4286592.7916,559889.0650 4286494.3140,559653.9623 4286452.8138,559636.5791 4286551.2914))
+- Number of points in region ..: 7257
+- Number of points to ignore: 
+  - First electric pylon ......: 0
+  - Second electric pylon .....: 0
+  - Electric pylons connection : 0
+  - Wires groups ..............: 0
+- Number of grids .............: 3443
+- Get height grids time .......: 13 milliseconds
+- Get values by grid time .....: 8 milliseconds
+- Get connected grids time ....: 0 milliseconds
+- Get statistics by group time : 0 milliseconds
+- Hazard areas maximum sag hypothesis groups:  0
+                                            Statistics distances                            Statistics fall distances                       Statistics free heights
+   N.Cells         Objects Ids   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std   Count      Mean   Minimum   Maximum       Std  WktGeometry

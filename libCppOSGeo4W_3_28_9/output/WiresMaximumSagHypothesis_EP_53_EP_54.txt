@@ -1,0 +1,84 @@
+Wires computation for maximum sag hypothesis
+- Project file ...................................: F:/seguridad_rural/Tendidos/pwl_tendidos.sqlite
+- Electric pylons connection .....................: EP_53_EP_54
+- Number of wire groups to compute ...............: 4
+- Processing parameters:
+  - Process only enabled connections .............: True
+  - Process only enabled wires groups ............: True
+  - Powerline voltage (kv) .......................: 132.0
+  - Wire type ....................................: 242-AL1/39-ST1A
+  - Wire section (mm2) ...........................: 281.1
+  - Wire elastic modulus (daN/mm2) ...............: 7500.0
+  - Wire coef linear thermal expansion (ºC-1) ....: 0.000018900
+  - Wire weight (daN/m) ..........................: 0.977
+  - Wire diameter (mm) ...........................: 21.8
+  - Wire breaking coefficient (daN) ..............: 8450.0
+  - Wire maximum distance from axis (m) ..........: 8.0
+  - Maximum vertical distance between wires (m) ..: 18.0
+  - Minimum safety ground distance (m) ...........: 10.0
+  - Safety ground distance (m) ...................: 10.0
+  - Digital terrain model file name ..............: F:/seguridad_rural/Tendidos/data/primera_cobertura_dtm.tif
+- Region of interest .............................: POLYGON((570777.8536 4283059.4917,570977.4275 4283094.0469,570980.1573 4283078.2815,570780.5834 4283043.7263,570777.8536 4283059.4917))
+- Minimum elevation from dtm .....................: 1228.206
+- Maximum elevation from dtm .....................: 1234.465
+- Maximum Sag ....................................: 5.494
+- Catenary computed from Sag: height(x)=c*cosh((x-x_min)/c)+bias, x is the 2d distance to first point;
+  - First point ..................................: ( 570779.2185, 4283051.6090, 1231.6023)
+  - Last point ...................................: ( 570978.7924, 4283086.1642, 1228.4000)
+  - Length (2d,m) ................................: 202.543
+  - Delta H (m) ..................................: -3.202
+  - Length (3d,m) ................................: 202.569
+  - Azimuth (deg) ................................: 80.176918715673
+    Iter      cSag   Error_sag
+       1    0.8717      4.6220
+       2    1.2328      4.2609
+       3    1.5099      3.9838
+       4    1.7435      3.7502
+       5    1.9493      3.5444
+       6    2.1354      3.3583
+       7    2.3065      3.1872
+       8    2.4658      3.0279
+       9    2.6154      2.8782
+      10    2.7570      2.7367
+      11    2.8916      2.6021
+      12    3.0202      2.4735
+      13    3.1436      2.3501
+      14    3.2623      2.2314
+      15    3.3769      2.1168
+      16    3.4877      2.0060
+      17    3.5951      1.8986
+      18    3.6994      1.7943
+      19    3.8008      1.6929
+      20    3.8996      1.5941
+      21    3.9960      1.4977
+      22    4.0901      1.4036
+      23    4.1821      1.3116
+      24    4.2721      1.2216
+      25    4.3603      1.1334
+      26    4.4467      1.0470
+      27    4.5315      0.9622
+      28    4.6147      0.8790
+      29    4.6965      0.7972
+      30    4.7768      0.7168
+      31    4.8559      0.6378
+      32    4.9337      0.5600
+      33    5.0103      0.4834
+      34    5.0857      0.4080
+      35    5.1600      0.3336
+      36    5.2333      0.2604
+      37    5.3056      0.1881
+      38    5.3769      0.1168
+      39    5.4473      0.0464
+  - Parameter c ..................................: 942.404405973129997
+  - Parameter x_min ..............................: 116.142128773529052
+  - Parameter bias ...............................: 282.032115461975536
+  - Parameter s ..................................: 202.9587
+  - Parameter sag ................................: 5.4473
+  - Parameter SagDistance ........................: 101.2400
+  - Parameter MaxError ...........................: 0.0000
+  - Parameter Std ................................: 0.0000
+- Catenary arc length ............................: 202.959
+- Theoretical sag ................................: 5.494
+- Catenary maximum sag ...........................: 5.447
+- Catenary maximum sag arc length ................: 101.240
+- Pylons minimum height ..........................: 19.736

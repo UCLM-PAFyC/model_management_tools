@@ -1,0 +1,27 @@
+{
+  "description" : "Collection format for EartEngine S1_GRD",
+  "references" : "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+  "tags" : ["S1_GRD", "EartEngine", "PAFYC", "UCLM", "VV_VH_Angle"],
+  "pattern" : ".*\\.tif", 
+  "images":{
+    "pattern" : ".*(S1[AB]_IW_GRD[FHM_]_[012][AS][SD][HV]_.{15}_.{15}_.{6}_.{6}_.{4})+\\.tif"
+  },
+  "datetime" : {
+    "pattern" : ".*S1[AB]_IW_GRD[FHM_]_[012][AS][SD][HV]_.{15}_(.{15})_.*\\.tif",
+    "format" : "%Y%m%dT%H%M%S"
+  },
+  "bands" : {
+    "VV" : {
+      "band" : 1,
+      "pattern" : ".+"
+    },
+    "VH" : {
+      "band" : 2,
+      "pattern" : ".+"
+    },
+    "angle" : {
+      "band" : 3,
+      "pattern" : ".+"
+    }
+  }
+}
