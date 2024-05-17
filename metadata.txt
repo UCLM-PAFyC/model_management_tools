@@ -9,7 +9,7 @@
 [general]
 name=Model Management Tools
 qgisMinimumVersion=3.4
-#qgisMaximumVersion=3.26.3
+qgisMaximumVersion=3.28.15
 description=A plugin for manage models
 version=0.1
 author=David Hernandez Lopez, Universidad de Castilla-La Mancha

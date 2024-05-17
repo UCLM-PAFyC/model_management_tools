@@ -1,6 +1,13 @@
-Point Cloud Database Management Project
-- Number of processes ......................................# 1
-- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI,WRITE_PCFS) ....# WRITE_PCFS
-  - Database file name .....................................# "C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/pct_pnoa_lidar_g50.sqlite"
-  - Point Cloud Files Suffix ...............................# _output
-  - Point Cloud Files Output Path (empty for current ) .....# C:/uclm/Ejemplo_Zamora_1/PNOA_LiDAR/export
+Model Database Management Project
+- Number of processes ......................................# 2
+- Process (CREATE_DB,ADD_ROI,...) ..........................# CREATE_DB
+  - Database file name .....................................# "D:/PAFyCToolsGui/230329_FuenteAlamo_Vid_A6000/ouput_acm/PAFyCToolsGui_230329_FuenteAlamo_Vid_A6000_PhotogrammetryMeasurements.sqlite"
+  - Database CRS (libCRS/EPSG/proj4/wkt) ...................# 25830
+  - Vertical CRS EPSG Code (-1, ellipsoid) .................# 5782
+  - Project Type (Generic,PowerLine,SolarPark) .............# pafyctools
+  - Project parameters (par1@v@value1@p@par2@v@value2...) ..# Author@v@@p@Company@v@
+- Process (CREATE_DB,ADD_POINTCLOUD,ADD_ROI) ...............# ADD_ROI
+  - Database file name .....................................# "D:/PAFyCToolsGui/230329_FuenteAlamo_Vid_A6000/ouput_acm/PAFyCToolsGui_230329_FuenteAlamo_Vid_A6000_PhotogrammetryMeasurements.sqlite"
+  - ROI File ...............................................# "D:/PAFyCToolsGui/230329_FuenteAlamo_Vid_A6000/input_data/FuenteAlamo_25830.shp"
+    Field id (None for all features ) ......................# None
+      Field id values (separed by ; ignored si None) .......# 

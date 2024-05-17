@@ -9,7 +9,7 @@
         <Description>Digital terrain model in raster format for estimate ground altitude</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/FuenteAlamo/data/dtm_50cm.tif</Value>
+        <Value>D:/PAFyCToolsGui/230329_FuenteAlamo_Vid_A6000/output/230329_FuenteAlamo_Vid_A6000_PC_25830_gcp-001_dtm_10cm.tif</Value>
     </Parameter>
     <Parameter>
         <Command>Compute Crops Bounding Box</Command>
@@ -34,7 +34,7 @@
         <Description>Distance from vine to bounding edge in orthogonal to line direction</Description>
         <PrintSize>20</PrintSize>
         <Unit>meters</Unit>
-        <Value>1.50</Value>
+        <Value>0.75</Value>
         <MaximumValue>4.00</MaximumValue>
         <MinimumValue>0.05</MinimumValue>
         <PrintPrecision>2</PrintPrecision>
@@ -74,7 +74,7 @@
         <Description>Shapefile of crops, point type, with id unique integer field and line integer field</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/FuenteAlamo_NW/data/cepas_amaro_dhl.shp</Value>
+        <Value>D:/PAFyCToolsGui/230329_FuenteAlamo_Vid_A6000/ouput_acm/Photogrammetry_Mesurements_FuenteAlamo.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Create Crops Management Project</Command>
@@ -445,7 +445,7 @@
         <Description>Shapefile to import</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/Proyectos_QGis_PAFyCTools/FuenteAlamo/data/GeolocalizacionCepas20200306_dhl.shp</Value>
+        <Value>D:/PAFyCToolsGui/230329_FuenteAlamo_Vid_A6000/ouput_acm/Photogrammetry_Mesurements_FuenteAlamo.shp</Value>
     </Parameter>
     <Parameter>
         <Command>Import shapefile</Command>
