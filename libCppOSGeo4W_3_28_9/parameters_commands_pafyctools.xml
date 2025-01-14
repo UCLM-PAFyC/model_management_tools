@@ -354,7 +354,7 @@
         <Description>Output path</Description>
         <PrintSize>200</PrintSize>
         <Unit>adimensional</Unit>
-        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/output_20250524</Value>
+        <Value>D:/QGisPAFyCTooolsProjects/20220426_Tarazona_Vid_A6000/crops_images_20240530</Value>
     </Parameter>
     <Parameter>
         <Command>Get images footprints from crops</Command>
